@@ -1,0 +1,31 @@
+digraph {
+    bgcolor = none
+
+    a_1 [label="a 1"]
+    a_2 [label="a 2"]
+    a_x [label="...", shape="none"]
+    a_N [label="a N"]
+    b_1 [label="b 1"]
+    b_2 [label="b 2"]
+    b_x [label="...", shape="none"]
+    b_N [label="b M"]
+
+    dummy [shape="point", width=0.01, height=0.01]
+
+    a_1 -> dummy [dir="none"]
+    a_2 -> dummy [dir="none"]
+    a_N -> dummy [dir="none"]
+    dummy -> b_1
+    dummy -> b_2
+    dummy -> b_N
+
+    {rank = same; a_1 -> a_2 [style="invis"]}
+    {rank = same; a_2 -> a_x [style="invis"]}
+    {rank = same; a_x -> a_N [style="invis"]}
+
+    {rank = same; b_1 -> b_2 [style="invis"]}
+    {rank = same; b_2 -> b_x [style="invis"]}
+    {rank = same; b_x -> b_N [style="invis"]}
+
+
+}

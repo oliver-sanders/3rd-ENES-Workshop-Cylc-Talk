@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/print.css" />
+  </head>
+  <body>
+
+    <div id="impress" data-transition-duration="1000">
+
+
+      <!-- Contents -->
+      <div id="contents" class="step" data-x="0" data-y="0" data-scale="4">
+        <h1>Cylc; The path to exascale</h1>
+        <ul>
+          <li>Cylc (re)-Introduction</li>
+          <li>Where we are now with exascale chalenges</li>
+          <li>Meeting the challenges of exascale</li>
+          <li>Introduction to Rose</li>
+        </ul>
+      </div>
+
+      <!-- Introduction -->
+      <div id="intro" class="step" data-rel-x="3000" data-rel-y="-1500">
+        <h1>Cylc (re)-Introduction</h1>
+        <p><i>Cylc the workflow engine</i></p>
+        <div class="person">
+          <img src="img/hillary.jpg" />
+          <span class="name">Hillary Oliver</span>
+          <br />
+          <span class="description">NIWA (NZ)</span>
+        </div>
+      </div>
+
+      <!-- Exascale I -->
+      <div id="exa1" class="step" data-rel-x="0" data-rel-y="1000"
+        data-rel-to="intro">
+        <h1>Exascale Challenges</h1>
+        <p><i>Present capabilities and challenges</i></p>
+        <div class="person">
+          <img src="img/hillary.jpg" />
+          <span class="name">Hillary Oliver</span>
+          <br />
+          <span class="description">NIWA (NZ)</span>
+        </div>
+      </div>
+
+      <!-- Exascale II -->
+      <div id="exa2" class="step" data-rel-x="0" data-rel-y="1000"
+        data-rel-to="exa1">
+        <h1>Meeting Exascale Challenges</h1>
+        <p><i>An outline of some potential pathways for future development</i></p>
+        <div class="person">
+          <img src="img/oliver.jpg" />
+          <span class="name">Oliver Sanders</span>
+          <br />
+          <span class="description">MetOffice (UK)</span>
+        </div>
+      </div>
+
+      <div id="exa2-outline" class="step" data-rel-x="1500" data-rel-y="0">
+        <h2>Suites are getting bigger</h2>
+        <p>This presents challenges for:</p>
+        <ul>
+          <li>Visualisation</li>
+          <li>Writing</li>
+          <li>Running</li>
+        </ul>
+      </div>
+
+      <div id="exa2-vis" class="step" data-rel-x="100" data-rel-y="0"
+           data-scale="0.15" data-rel-to="exa2-outline">
+        <h2>The Visualisation Problem</h2>
+        <center>
+          <object id="graph" data="img/global.svg" type="image/svg+xml">
+            <img src="yourfallback.jpg" />
+          </object>
+        </center>
+        <span class="substep" id="graph-zoom-1"></span>
+        <span class="substep" id="graph-zoom-2"></span>
+        <span class="substep" id="graph-zoom-3"></span>
+      </div>
+
+      <div id="exa2-vis1" class="step" data-rel-x="300" data-rel-y="0"
+           data-scale="0.15">
+        <h2>New Cylc GUI</h2>
+        <img class="small" src="img/html5.png">
+      </div>
+
+      <div id="exa2-run-pre" class="step" data-rel-x="0" data-rel-y="0"
+           data-rel-to="exa2-outline">
+      </div>
+
+      <div id="exa2-run1" class="step" data-rel-x="100" data-rel-y="170"
+           data-scale="0.15" data-rel-to="exa2-outline">
+        <p>Cylc can currently scale to tens of thousands of tasks and
+        dependencies</p>
+        <p>But there are limitations, for example:</p>
+      </div>
+
+      <div id="exa2-run2" class="step" data-rel-x="300" data-rel-y="0"
+           data-scale="0.15">
+        <img class="full" src="img/many-to-many.png" />
+        <p>Many to many triggers result in MxN dependencies</p>
+      </div>
+
+      <div id="exa2-run3" class="step" data-rel-x="300" data-rel-y="0"
+           data-scale="0.15">
+        <img class="full" src="img/many-many-as-one.png" />
+        <p>Cylc should be able to represent this as a single dependency</p>
+      </div>
+
+      <div id="exa2-run4" class="step" data-rel-x="300" data-rel-y="0"
+           data-scale="0.15">
+        <p>Our ambition is to work towards a leaner Cylc which can efficiently
+        scale to the largest suites</p>
+      </div>
+
+      <div id="exa2-run5" class="step" data-rel-x="300" data-rel-y="0"
+           data-scale="0.15">
+        <p>We plan to reimplement the Cylc scheduling algorithm to a more
+        <i>efficient</i> and <i>flexible</i> model so solve examples like
+        this</p>
+      </div>
+
+
+      <!--<div id="re-overview" class="step" data-x="4500" data-y="1500"-->
+      <!--data-scale="7">-->
+      <!--</div>-->
+
+
+      <!-- Rose -->
+      <div id="rose" class="step" data-rel-x="0" data-rel-y="1000"
+        data-rel-to="exa2">
+        <h1>Introduction To Rose</h1>
+        <p><i>A toolkit for writing, editing and running application configurations</i></p>
+        <div class="person">
+          <img src="img/dave.jpg" />
+          <span class="name">David Matthews</span>
+          <br />
+          <span class="description">MetOffice (UK)</span>
+        </div>
+      </div>
+
+
+    </div>
+
+    <script type="text/javascript" src="js/impress.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+
+  </body>
+</html>

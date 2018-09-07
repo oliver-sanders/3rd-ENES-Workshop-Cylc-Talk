@@ -1,0 +1,7 @@
+graph {
+    subgraph cluster_foo {
+        label = "foo"
+        node [shape="circle"]
+        bar
+    }
+}

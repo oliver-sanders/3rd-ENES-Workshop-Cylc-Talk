@@ -1,0 +1,64 @@
+body {
+    font-family: 'PT Sans', sans-serif;
+    min-height: 740px;
+
+    background: rgb(215, 215, 215);
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(rgb(240, 240, 240)), to(rgb(190, 190, 190)));
+    background: -webkit-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background:    -moz-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background:     -ms-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background:      -o-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background:         radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+}
+
+.step {
+    position: relative;
+    width: 1000px;
+    height: 800px;
+    padding: 40px;
+    margin: 20px auto;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing:    border-box;
+    -ms-box-sizing:     border-box;
+    -o-box-sizing:      border-box;
+    box-sizing:         border-box;
+
+    font-family: 'PT Serif', georgia, serif;
+    font-size: 48px;
+    line-height: 1.5;
+}
+
+h1 {
+    font-size: 80px;
+}
+
+h2 {
+    font-size: 60px;
+}
+
+.person img {
+    float:left;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: -10px 50px 0 0;
+}
+
+.person span.name {
+    float:left;
+    font-size: 45px;
+}
+
+.person span.description {
+    float:left;
+    font-size: 35px;
+}
+
+img.small {
+    width: 150px;
+}
+
+img.full {
+    height: 400px;
+}
