@@ -11,6 +11,10 @@ body {
     background:         radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
 }
 
+.notes {
+  display:none;
+}
+
 .step {
     position: relative;
     width: 1000px;
