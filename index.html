@@ -1,13 +1,23 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- font-face rule needed here not in css file to avoid CORS block? -->
+    <style>
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: 400;
+  src: local('TitilliumWeb'),
+  url('fonts/TitilliumWeb/TitilliumWeb-Regular.WOFF')
+  format('woff');
+}
+    </style>
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/print.css" />
   </head>
   <body>
 
     <div id="impress" data-transition-duration="1000">
-
 
       <!-- Contents -->
       <div id="contents" class="step" data-x="0" data-y="0" data-scale="4">
