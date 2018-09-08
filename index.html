@@ -14,18 +14,19 @@
     </style>
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/print.css" />
+    <link rel="stylesheet" href="highlight/styles/solarized-light.css">
   </head>
   <body>
 
     <div id="impress" data-transition-duration="1000">
 
-      <div id="title" class="step" data-x="0" data-y="0"
-        data-scale="3" style="padding:0; margin-left:300px">
+      <div id="title" class="step image" data-x="0" data-y="0"
+        data-scale="3">
         <img src="img/supercomputer2.jpg" 
-             style="width:100%; position:absolute; top:10%"
+             style="width:100%; position:absolute; top:15%"
              alt="supercomputer" 
              />
-        <div style="position:absolute; left:100px; top:50px; color:white;
+        <div style="position:absolute; left:100px; top:12%; color:white;
         text-shadow: 0 2px 2px #000; text-align:center">
           <h1 style="margin-top:5%; margin-bottom:300px">Cylc: The Path To
             Exascale</h1>
@@ -39,8 +40,7 @@
 
       <!-- Contents -->
       <div id="contents" class="step" data-rel-x="500" data-rel-y="2500" data-scale="4">
-        <h2>Cylc: The Path To Exascale</h2>
-        <ul>
+        <ul style="margin-top:20%">
           <li><img src="img/hilary.jpg" style="height:40px"/>
             Exascale Workflow?</li>
           <li><img src="img/hilary.jpg" style="height:40px"/>
@@ -56,8 +56,8 @@
 
       <!-- Prelude -->
       <div id="prelude" class="step" data-rel-x="3000" data-rel-y="-3500">
-        <h1>Exascale Workflow?</h1>
-        <p><i>What in hell does this mean?</i></p>
+        <h1>Exascale Workflow??</h1>
+        <p><i>What do we mean by this?</i></p>
         <div class="person">
           <img src="img/hilary.jpg" />
           <span class="name">Hilary Oliver</span>
@@ -109,11 +109,11 @@
         </div>
     </div>
 
-    <div class="step" data-rotate="60">
+    <div class="step image" data-rotate="60">
         <img src="img/stormtrooper-duck.png" 
              alt="Exascale Workflow 2" 
-             style="width:100%; position:absolute"/>
-        <div style="position:absolute; left:70%; top:40%; width:290px;
+             style="width:100%; position:absolute; top:15%"/>
+        <div style="position:absolute; left:65%; top:50%; width:290px;
           font-size:90%">
           workflow automation is critical to utilizing these massive
           rescources
@@ -126,10 +126,9 @@
         </div>
     </div>
 
-    <div class="step" data-rotate="30">
-      <h3>Met Office ExaScale Programme</h3>
+    <div class="step image" data-rotate="30">
         <img src="img/mo-exascale-prog-scope.png" 
-             style="width:100%"
+             style="width:100%; margin-top:15%"
              alt="MO Exascale Scope" 
              class="right"/>
         <div class="notes">
@@ -148,7 +147,339 @@
           <br />
           <span class="description">NIWA (NZ)</span>
         </div>
+        <br/>
+        <ul>
+          <li> cycling workflows </li>
+          <li> workflow definition </li>
+          <li> architecture </li>
+          <li> user interface </li>
+        </ul>
+        <div class="notes">
+          Why cycling workflows?
+          <ul>
+            <li> real time environmental forecasting </li>
+            <li> and running the same systems off-the-clock</li>
+            <li> split long model integrations into many smaller chunks</li>
+            <li> steps in some iterative processes (e.g. model parameter tuning)</li>
+            <li> process a series of datasets</li> 
+            <li> with <i>pipeline parallelism</i> (or better)</li>
+          </ul>
+        </div>
       </div>
+
+    <div class="step image" data-rel-x="1500" data-rel-y="0" data-rotate="10">
+        <img src="img/cycling-workflow-layer8.png" 
+             style="position:absolute; height:100%; left:60px"
+             alt="" 
+             class=""/>
+
+        <img src="img/cycling-workflow-layer7.png" 
+             style="position:absolute;height:100%; left:60px"
+             alt="" 
+             class="substep"/>
+ 
+        <img src="img/cycling-workflow-layer6.png" 
+             style="position:absolute; height:100%; left:60px"
+             alt="" 
+             class="substep"/>
+ 
+        <img src="img/cycling-workflow-layer5.png" 
+             style="position:absolute; height:100%; left:60px"
+             alt="" 
+             class="substep"/>
+ 
+        <img src="img/cycling-workflow-layer4.png" 
+             style="position:absolute; height:100%; left:60px"
+             alt="" 
+             class="substep"/>
+ 
+        <img src="img/cycling-workflow-layer3.png" 
+             style="position:absolute; height:100%; left:60px"
+             alt="" 
+             class="substep"/>
+ 
+        <img src="img/cycling-workflow-layer2.png" 
+             style="position:absolute; height:100%; left:60px"
+             alt="" 
+             class="substep"/>
+ 
+        <img src="img/cycling-workflow-layer1.png" 
+             style="position:absolute; height:100%; left:60px"
+             alt="" 
+             class="substep"/>
+ 
+        <div class="notes">
+        </div>
+    </div>
+
+    <div class="step image" data-rotate="20">
+        <img src="img/animation-key-1.png" style="height:100%; margin-left:18%"
+             alt="animation key" 
+             class="center"/>
+        <div class="notes">
+        </div>
+    </div>
+
+    <div class="step image" data-rotate="30">
+      <video onclick="this.paused ? this.play() : this.pause();"
+        style="width:100%; margin-top:20px">
+      <source src="img/cycling-workflow-10-retries.webm">
+      Your browser does not support webm video
+    </video>
+        <div class="notes">
+        </div>
+    </div>
+
+    <div class="step image" data-rotate="30">
+        <img src="img/dep-two-cycles.svg" 
+             style="position:absolute; width:100%; top:10%"
+             alt="" 
+             class=""/>
+        <img src="img/timeline-three-a.svg" 
+             style="position:absolute; top:60%; width:100%"
+             alt="" 
+             class="substep"/>
+        <img src="img/timeline-three.svg"
+             style="position:absolute; top:60%; width:100%"
+             alt="" 
+             class="substep"/>
+        <div class="notes">
+        </div>
+    </div>
+
+    <div class="step">
+      <h2>What is Cylc (currently) Like?</h2>
+      <ul>
+        <li>complex "macro-scale" cycling workflows in HPC</li>
+        <li>text config file (with programmatic templating)
+          <ul>
+            <li>treat workflow definitions like source code</li>
+            <li>efficient: shared config, graph notation, families.</li>
+          </ul>
+        <li>flexible and general
+        <ul>
+          <li>ANY date-time or integer cycling sequence</li>
+          <li>use any command, script, or program, as a task</li>
+          <li>makes no assumptions about data movement</li>
+        </ul>
+        </li>
+        <li>distributed architecture - no central server</li>
+      </ul>
+      <div class="notes">
+        Note a workflow is primarily a configuration of the workflow engine,
+        and a config file is easier for most users and most use cases than
+        programming to a Python API. However, ...!
+
+        Cylc is not currently so well suited to large numbers of small
+        quick-running jobs (later...)
+      </div>
+    </div>
+
+
+    <div class="step image">
+        <img src="img/cylc-arch.png" style="width:100%; margin-top:40px" alt=""/>
+        <div class="notes">
+        </div>
+    </div>
+
+    <div class="step image">
+        <img src="img/gcylc-1.png" 
+             style="position:absolute; width:100%; top:25px"
+             alt="" 
+             class=""/>
+        <img src="img/gcylc-3.png" 
+             style="position:absolute; width:100%; top:25px"
+             alt="" 
+             class="substep"/>
+        <img src="img/gscan.png" 
+             style="position:absolute; width:100%; top:25px"
+             alt="" 
+             class="substep"/>
+        <div class="notes">
+        </div>
+    </div>
+    
+    <div class="step" data-rotate="30">
+      <img src="img/hello.svg" 
+           style="width:35%; position:absolute; top:35%; right:0"
+           alt="MO Exascale Scope"/>
+
+      <pre><code class="ini" style="position:absolute; top:0">
+# Hello World! Plus
+[scheduling]
+   [[dependencies]]
+       graph = "hello => farewell & goodbye"
+      </code></pre>
+
+      <pre class="substep"><code class="ini" style="position:absolute; top:0">
+# Hello World! Plus
+[scheduling]
+   [[dependencies]]
+       graph = "hello => farewell & goodbye"
+[runtime]
+   [[hello]]
+       script = echo "Hello World!"
+      </code></pre>
+      <pre class="substep"><code class="ini" style="position:absolute; top:0">
+# Hello World! Plus
+[scheduling]
+   [[dependencies]]
+       graph = "hello => farewell & goodbye"
+[runtime]
+   [[hello]]
+       script = echo "Hello World!"
+       [[[environment]]]
+           # ...
+       [[[remote]]]
+           host = hpc1.niwa.co.nz
+       [[[job]]]
+           batch system = PBS
+           # ...
+       # ...
+   # ...
+      </code></pre>
+
+      <div class="notes">
+        Plus:
+        <ul>
+          <li>[runtime] is an inheritance heirarchy for efficient sharing of
+            common settings
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="step" data-rotate="30">
+
+      <img src="img/hello-0.svg" 
+           style="width:35%; margin-top:10%; display:block; position:absolute;
+           right:0"
+           alt=""/>
+
+      <img src="img/hello.svg" 
+           style="width:35%; margin-top:10%; display:block; position:absolute;
+           right:0"
+           class="substep"
+           alt=""/>
+
+      <pre><code class="ini">
+ #!Jinja2
+ {% set SAY_BYE = false %}
+ [scheduling]
+    [[dependencies]]
+       graph = """hello
+ {% if SAY_BYE %} 
+         => goodbye & farewell
+ {% endif %}
+               """
+[runtime]
+    # ...
+      </code></pre>
+        <div class="notes">
+        </div>
+    </div>
+
+    <div class="step image" data-rotate="90">
+      <img src="img/ensemble1.svg" 
+           style="position:absolute; top:20%; width:30%"
+           alt=""/>
+      <img src="img/ensemble2.svg" 
+           style="position:absolute; top:5%; right:0; width:55%"
+           alt=""
+           class="substep"/>
+      <img src="img/ens_plain.svg" 
+           style="position:absolute; bottom:0; right:0; width:60%"
+           alt=""
+           class="substep"/>
+      <div class="notes">
+      </div>
+    </div>
+
+    <div class="step" data-rotate="40">
+      <img src="img/param-simple.svg" 
+           style="width:50%; margin-left:25%"
+           alt="" class=""/>
+        <pre><code class="ini">[[dependencies]]
+   graph = "pre => sim&lt;M&gt; => post&lt;M&gt; => done"
+   # with M = 1..5</code></pre>
+
+      <img src="img/params-5.svg" 
+           style="width:50%; margin-left:25%"
+           alt="" class=""/>
+ 
+      <div class="notes">
+      </div>
+    </div>
+
+    <div class="step" data-rotate="-30">
+      <img src="img/param-simple-2.svg" 
+           style="width:70%; margin-left:15%"
+           alt="" class=""/>
+        <pre><code class="ini" style="font-size:20px">[[dependencies]]
+   graph = "prep => init&lt;R&gt; => sim&lt;R,M&gt; => post&lt;R,M&gt; => close&lt;R&gt; => done"
+   # with M = a,b,c; and R = 1..3</code></pre>
+      <img src="img/params-5-2.svg" 
+           style="width:86%; margin-left:7%"
+           alt="" class=""/>
+      <div class="notes">
+      </div>
+    </div>
+
+    <div class="step" data-rotate="30">
+      <div style="display:block; position:absolute; top:0">
+        <pre><code class="ini">
+[cylc]
+   cycle point format = %Y-%m
+[scheduling]
+   initial cycle point = 2010-01
+   [[dependencies]]
+      [[[R1]]]
+         graph = "prep => foo"
+        </code></pre>
+        <div class="notes">
+        </div>
+      </div>
+
+      <div class="substep" style="display:block; position:absolute; top:0">
+        <pre><code class="ini">
+[cylc]
+   cycle point format = %Y-%m
+[scheduling]
+   initial cycle point = 2010-01
+   [[dependencies]]
+      [[[R1]]]
+         graph = "prep => foo"
+      [[[P1M]]]
+         graph = "foo[-P1M] => foo => bar & baz => qux"
+        </code></pre>
+      </div>
+
+      <div class="substep" style="display:block; position:absolute; top:0;">
+        <pre><code class="ini">
+[cylc]
+   cycle point format = %Y-%m
+[scheduling]
+   initial cycle point = 2010-01
+   [[dependencies]]
+      [[[R1]]]
+         graph = "prep => foo"
+      [[[P1M]]]
+         graph = "foo[-P1M] => foo => bar & baz => qux"
+      [[[R2/^+P2M/P1M]]]
+         graph = "baz & qux[-P2M] => boo"
+        </code></pre>
+      </div>
+      <div class="notes">
+      </div>
+    </div>
+
+    <div class="step image" data-rotate="90">
+      <img src="img/cycling-suiterc-example.svg" 
+           style="height:100%; margin-left:10%"
+           alt="">
+      <div class="notes">
+      </div>
+    </div>
 
 
       <!-- Exascale I -->
@@ -163,6 +494,200 @@
           <span class="description">NIWA (NZ)</span>
         </div>
       </div>
+
+    <div class="step image" data-rel-x="1500" data-rel-y="0">
+        <img src="img/gcylc-3.png" 
+             style="width:100%; margin-top:25px"
+             alt="" 
+             class=""/>
+        <div class="notes">
+        </div>
+    </div>
+ 
+    <div class="step" data-rotate="30">
+      <h2>Immediate: Web GUIs, Python 3</h2>
+      <img src="img/cylc-web-arch.png" 
+           style="position:absolute; right:0; top:25%"
+           alt=""/>
+      <div style="position:absolute; width:60%">
+      <ul>
+        <li>Python 2 is near end of life</li>
+        <li>PyGTK GUIs are near obsolete</li>
+      </ul>
+      <ul>
+        <li> web GUI work starting
+          <ul> 
+            <li>need new architecture!</li>
+          </ul>
+        </li>
+      </ul>
+      </div>
+      <div class="notes">
+      </div>
+    </div>
+
+    <div class="step image" data-rotate="60">
+        <img src="img/stormtrooper-duck.png" 
+             alt="Exascale Workflow 2" 
+             style="width:100%; position:absolute; top:15%"/>
+        <div style="position:absolute; left:65%; top:50%; width:310px">
+         THEN: scaling; config API; visualization;
+         light sub-suites... 
+        </div>
+        <div class="notes">
+          <p>Even if the primary purpose of these machines is for massive
+          exascale models, much of the time will still be spent running
+          large numbers of smaller models, and associated data processing.</p>
+        </div>
+    </div>
+
+    <div class="step image">
+      <img src="img/nzlam-ungrouped-2.svg" 
+           style="position:absolute; top:10%; width:100%;"
+           alt=""
+           class=""/>
+      <div class="notes">
+        A typical small regional determistic NWP suite, 3 cycles. Obs
+        processing tasks in yellow. A few tasks generate thousands of products
+        en masse, from a few large model output files.
+      </div>
+    </div>
+
+    <div class="step image" >
+      <img src="img/nzlam-m10.svg" 
+           style="margin-left:35%; height:100%"
+           alt=""
+           class=""/>
+      <div class="notes">
+        ... now a 10-member ensemble, ~450 tasks (3 cycles).
+      </div>
+    </div>
+
+    <div class="step image" data-rotate="70">
+      <img src="img/nzlam-m30.png" 
+           style="position:absolute; top 0; left:40%; height:100%"
+           alt=""
+           class=""/>
+      <img src="img/nzlam-m30-zoom.png" 
+           style="position:absolute; top 0; left:20px; height:100%"
+           alt=""
+           class="substep"/>
+ 
+      <div class="notes">
+        ... now a 30-member ensemble, ~1300 tasks (3 cycles).
+      </div>
+    </div>
+
+    <div class="step" data-rotate="60">
+      Easily construct and control ensemble-type Cylc workflows of
+          thousands of tasks per cycle
+      <ul>
+        <li> Tested sans GUI at 50k tasks! (need lots of RAM)</li>
+      </ul>
+      BUT a problem use case has emerged to point the way: processing
+      <i>incremental outputs</i> from model ensembles, for
+          verification and product generation
+      <ul>
+        <li>multi-dimensional dynamic cycling</li>
+        <li>or light-weight sub-suites</li>
+        <li>bunching many small tasks ... with dependencies</li>
+        <li>automatic reconfiguring of huge suites</li>
+      </ul> 
+      <div class="notes">
+        <ul>
+          <li>Met Office IMPROVER: 100k <i>jobs</i> per cycle.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="step image" data-rotate="10">
+      <div style="position:absolute; background:rgb(215,215,215); height:100%;
+        width:100%">
+        <img src="img/ensemble-post-0.svg" 
+             style="margin-left:20%; height:100%"
+             alt=""
+             class=""/>
+      </div>
+      <div style="position:absolute; background:rgb(215,215,215); height:100%;
+        width:100%" class="substep">
+        <img src="img/ensemble-post-1.svg" 
+             style="width:100%; margin-top:100px"
+             alt=""/>
+      </div>
+      <div style="position:absolute; background:rgb(215,215,215); height:100%;
+        width:100%" class="substep">
+        <img src="img/ensemble-post-2.svg" 
+           style="width:100%; margin-top:100px"
+           alt=""/>
+      </div>
+       <div class="substep" style="position:absolute; bottom:200px; color:hotpink">
+         1 model, 2 files/hour for 10 model-hours, 1 task/file ...
+       </div>
+       <div class="substep" style="position:absolute; bottom:50px">
+         <br/>
+         30 members, 7 files/hour for 10 model-days, 5 task/file ... <br/>
+         <span style="color:deeppink">30 x 7 x (24x10) x 5 = 250,000 jobs per
+         cycle!</span>
+       </div>
+      <div class="notes">
+        5 tasks per file: each of the pink blobs is a workflow!
+      </div>
+    </div>
+
+    <div class="step">
+      0.25M tasks per cycles is way too much for Cylc.
+        <ul>
+          <li> these tasks totally dominate the workflow</li>
+          <li> parameterized "cycle" over forecast hour (1...240)</li>
+          <li>can't use efficient dynamic cycling (nested!)</li>
+            <li> for now a lot of <i>bunching</i> is required</li>
+            <li> or <i>sub-suites</i>, but:
+            <ul>
+              <li> 30+ suites (per cycle) instead of 1 suite!</li>
+              <li> log directory housekeeping?</li>
+              <li> start-up, kill, restart, failure recovery etc.?</li>
+            </ul>
+          </li>
+        </ul>
+        <div class="notes">
+          <ul>
+            <li> cylc can have multiple "top-level" cycling sequences in one
+              suite</li>
+            <li> but not nested cycling</li>
+            <li>NOTE: the HPC infrastructure can't handle this yet either!</li>
+        </div>
+    </div>
+
+    <div class="step">
+      <h3>actually it's worse than this!</h3>
+      Real post-processing systems may:
+        <ul>
+          <li>aggregate output from multiple model suites </li>
+          <li>have complex verification + product-generation workflows that are
+            not bunching-friendly</li>
+          <li>require dynamic re-configuration to swap products in and out</li>
+        </ul>
+        <div class="notes">
+          <ul>
+            <li> cylc can have multiple "top-level" cycling sequences in one
+              suite</li>
+            <li> but not nested cycling</li>
+        </div>
+    </div>
+
+    <div class="step">
+      <h3>... the future of cylc</h3>
+      (Oliver)
+        <ul>
+          <li>general efficiency (e.g. don't hold job config in memory)</li>
+          <li>event-driven and spawn on demand</li>
+          <li>light-weight scheduler kernel for light-weight "sub-suites" that
+            don't generate all the usual log files</li>
+          <li>Python API </li>
+          <li>self-assembling workflow from task inputs and outputs </li>
+        </ul>
+    </div>
+
 
       <!-- Exascale II -->
       <div id="exa2" class="step" data-rel-x="0" data-rel-y="1000"
@@ -242,7 +767,6 @@
         this</p>
       </div>
 
-
       <!--<div id="re-overview" class="step" data-x="4500" data-y="1500"-->
       <!--data-scale="7">-->
       <!--</div>-->
@@ -261,12 +785,20 @@
         </div>
       </div>
 
-    <div id="overview" class="step" data-x="3000" data-y="000" data-scale="10" style="pointer-events: none;">
+    <div id="overview" class="step" data-x="12000" data-y="4000" data-scale="15"
+      style="pointer-events: none;">
+    </div>
     </div>
 
+<!--
+    Add navigation-ui controls: back, forward and a select list.
+    Add a progress indicator bar (current step / all steps)
+-->
+<div id="impress-toolbar"></div>
+<div class="impress-progressbar"><div></div></div>
+<div class="impress-progress"></div>
 
-    </div>
-
+    <script type="text/javascript" src="highlight/highlight.cylc.pack.js"></script>
     <script type="text/javascript" src="js/impress.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
 
