@@ -14,7 +14,7 @@ body {
 .step {
     position: relative;
     width: 1000px;
-    height: 800px;
+    height: 750px;
     padding: 40px;
     margin: 20px auto;
 
@@ -61,4 +61,16 @@ img.small {
 
 img.full {
     height: 400px;
+}
+
+td {
+    padding: 5px 15px 5px 15px;
+    text-align: center;
+}
+
+.bubble {
+    border-radius: 100%;
+    background: grey;
+    padding: 10px;
+    text-align: center;
 }
