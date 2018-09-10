@@ -1,0 +1,34 @@
+digraph {
+    bgcolor = none
+
+    subgraph cluster_1 {
+        style = dashed
+        color = cornflowerblue
+        fontcolor = cornflowerblue
+
+        node [color = cornflowerblue, fontcolor = cornflowerblue]
+
+        b1
+        b2
+        b3
+        b4
+    }
+
+    subgraph cluster_2 {
+        style = dashed
+        color = chocolate
+        fontcolor = chocolate
+
+        node [color = chocolate, fontcolor = chocolate]
+
+        c1
+        c2
+        c3
+        c4
+    }
+
+    a -> b1 -> c1 -> d
+    a -> b2 -> c2 -> d
+    a -> b3 -> c3 -> d
+    a -> b4 -> c4 -> d
+}

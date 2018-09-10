@@ -705,7 +705,7 @@
           <img src="img/oliver.jpg" />
           <span class="name">Oliver Sanders</span>
           <br />
-          <span class="description">MetOffice (UK)</span>
+          <span class="description">Met Office (UK)</span>
         </div>
       </div>
 
@@ -719,12 +719,14 @@
         </ul>
       </div>
 
-      <div id="exa2-vis" class="step" data-rel-x="100" data-rel-y="0"
-           data-scale="0.15" data-rel-to="exa2-outline">
+      <div id="exa2-vis" class="step" data-rel-x="0" data-rel-y="-20"
+           data-scale="0.10" data-rel-to="exa2-outline">
         <h2>The Visualisation Problem</h2>
         <center>
           <object id="graph" data="img/global.svg" type="image/svg+xml">
-            <img src="yourfallback.jpg" />
+          </object>
+          <!--<object id="graph" data="img/nzlam-m30.svg" type="image/svg+xml"-->
+          <!--  width="1000px" height="600px">-->
           </object>
         </center>
         <span class="substep" id="graph-zoom-1"></span>
@@ -732,68 +734,166 @@
         <span class="substep" id="graph-zoom-3"></span>
       </div>
 
-      <div id="exa2-vis1" class="step" data-rel-x="300" data-rel-y="0"
-           data-scale="0.15">
+      <div id="exa2-vis1" class="step" data-rel-x="150" data-rel-y="0"
+           data-scale="0.10">
         <h2>New Cylc GUI</h2>
-        <img class="small" src="img/html5.png">
+        <img width="250px" height="250px" src="img/html5.png">
+        <img width="180px" height="250px" src="img/css3.png">
+      </div>
+
+      <div id="exa2-vis2" class="step" data-rel-x="75" data-rel-y="0"
+           data-scale="0.10">
+        <h3>Combine gscan and gcylc</h3>
+        <img class="full" src="img/gui-gscan-gcylc.png"/>
+      </div>
+
+      <div id="exa2-vis3" class="step" data-rel-x="75" data-rel-y="0"
+           data-scale="0.10">
+        <h3>View N edges to selected node</h3>
+        <img class="full substep"
+             src="img/gui-graph-limited-nodes-1.png"
+             style="position:absolute;" />
+        <img class="full substep"
+             src="img/gui-graph-limited-nodes-2.png"
+             style="position:absolute;" />
+        <!-- TODO - export on a computer with better font support -->
+      </div>
+
+      <div id="exa2-vis4" class="step" data-rel-x="80" data-rel-y="0"
+           data-scale="0.10">
+        <h3>Alternative Views</h3>
+        image of matrix and gant mock ups
+        <!-- TODO - create image -->
+      </div>
+
+      <div id="exa2-vis5" class="step" data-rel-x="80" data-rel-y="0"
+           data-scale="0.10">
+        <h3>Selecting tasks between views</h3>
+        <!-- TODO - remove image background -->
+        <img class="full" src="img/gui-matrix.png" />
+      </div>
+
+      <div id="exa2-writ-pre" class="step" data-rel-x="0" data-rel-y="0"
+           data-rel-to="exa2-outline">
+      </div>
+
+      <div id="exa2-writ" class="step" data-rel-x="0" data-rel-y="75"
+           data-scale="0.10" data-rel-to="exa2-outline">
+        <h2>The modularity problem</h2>
+        <ul>
+          <li>We can split the suite.rc into multiple files but...</li>
+          <li>Suites are monolithic</li>
+          <li>Developing components in isolation is difficult</li>
+        </ul>
+      </div>
+
+      <div id="exa2-writ1" class="step" data-rel-x="110" data-rel-y="0"
+           data-scale="0.10">
+        <p>It's hard to incorporate a module into a workflow</p>
+        <img width="1000px" src="img/sub-workflow-current.png" />
+      </div>
+
+      <div id="exa2-writ2" class="step" data-rel-x="110" data-rel-y="0"
+           data-scale="0.10">
+        <p>Ideally we would write dependencies to/from the module itself
+        rather than the tasks within it</p>
+        <img width="1000px" src="img/sub-workflow.png" />
+
+      </div>
+
+      <div id="exa2-writ3" class="step" data-rel-x="110" data-rel-y="0"
+           data-scale="0.10">
+        <p>Workflows could be represented as tasks</p>
+        <img width="500px" src="img/sub-workflow-collapsed.png" />
+        <pre>foo => baz => module&lt;param&gt; => pub</pre>
+      </div>
+
+      <div id="exa2-writ4" class="step" data-rel-x="110" data-rel-y="0"
+           data-scale="0.10">
+        <p>Advantages of workflow modules:</p>
+        <ul>
+          <li>Re-usable workflow components</li>
+          <li>The parent workflow remains simple</li>
+          <li>Programmatic logic at the correct level (workflow/module)</li>
+        </ul>
+      </div>
+
+      <div id="exa2-writN" class="step" data-rel-x="110" data-rel-y="0"
+           data-scale="0.10">
+        <h3>Python API</h3>
+        <p>For truly programmatic problems Jinja2 doesn't quite cut it!</p>
+
+        TODO - this
       </div>
 
       <div id="exa2-run-pre" class="step" data-rel-x="0" data-rel-y="0"
            data-rel-to="exa2-outline">
       </div>
 
-      <div id="exa2-run1" class="step" data-rel-x="100" data-rel-y="170"
-           data-scale="0.15" data-rel-to="exa2-outline">
+      <!-- TODO insert slides with profiling results -->
+
+      <div id="exa2-run1" class="step" data-rel-x="0" data-rel-y="170"
+           data-scale="0.10" data-rel-to="exa2-outline">
+        <h3>Scaling With Dependencies</h3>
         <p>Cylc can currently scale to tens of thousands of tasks and
         dependencies</p>
         <p>But there are limitations, for example:</p>
       </div>
 
-      <div id="exa2-run2" class="step" data-rel-x="300" data-rel-y="0"
-           data-scale="0.15">
+      <div id="exa2-run2" class="step" data-rel-x="110" data-rel-y="0"
+           data-scale="0.10">
         <img class="full" src="img/many-to-many.png" />
-        <p>Many to many triggers result in MxN dependencies</p>
+        <p>Many to many triggers result in NxM dependencies</p>
       </div>
 
-      <div id="exa2-run3" class="step" data-rel-x="300" data-rel-y="0"
-           data-scale="0.15">
+      <div id="exa2-run3" class="step" data-rel-x="110" data-rel-y="0"
+           data-scale="0.10">
         <img class="full" src="img/many-many-as-one.png" />
         <p>Cylc should be able to represent this as a single dependency</p>
       </div>
 
-      <div id="exa2-run4" class="step" data-rel-x="300" data-rel-y="0"
-           data-scale="0.15">
+      <div id="exa2-run4" class="step" data-rel-x="110" data-rel-y="0"
+           data-scale="0.10">
         <p>Our ambition is to work towards a leaner Cylc which can efficiently
         scale to the largest suites</p>
-      </div>
-
-      <div id="exa2-run5" class="step" data-rel-x="300" data-rel-y="0"
-           data-scale="0.15">
         <p>We plan to reimplement the Cylc scheduling algorithm to a more
-        <i>efficient</i> and <i>flexible</i> model so solve examples like
-        this</p>
+        <i class="emph">efficient</i> and <i class="emph">flexible</i> model
+        to solve problems like this</p>
       </div>
 
-      <div id="exa2-run6" class="step" data-rel-x="300" data-rel-y="0"
-           data-scale="0.15">
+      <div id="exa2-run5" class="step" data-rel-x="110" data-rel-y="0"
+           data-scale="0.10">
+        <h3>Kernel - Shell Architecture</h3>
+        <p>Working towards a leaner Cylc we plan to separate the codebase into
+        a Kernel - Shell model</p>
         <center>
-          <p>Working towards a leaner Cylc we plan to separate the codebase into
-          a Kernel - Shell model</p>
           <table>
             <tr>
-              <td><div class="bubble">Shell</div></td>
-              <td><div class="bubble">Kernel</div></td>
+              <td><div class="bubble" style="color:white">Shell</div></td>
+              <td><div class="bubble" style="color:white">Kernel</div></td>
             </tr>
             <tr>
-              <td>User Commands</td>
-              <td>Scheduler</td>
+              <td class="emph">User Commands</td>
+              <td class="emph1">Scheduler</td>
             </tr>
-              <td>Suite Configuration</td>
-              <td>Job Submission</td>
+              <td class="emph">Suite Configuration</td>
+              <td class="emph1">Job Submission</td>
           </table>
         </center>
       </div>
 
+      <div id="exa2-run6" class="step" data-rel-x="110" data-rel-y="0"
+           data-scale="0.10">
+        <h3>Batching together jobs</h3>
+        <div style="float:left;">
+          <p>Horizontal Batching</p>
+          <img class="full" src="img/batched-jobs-2.png" />
+        </div>
+        <div style="float:left;">
+          <p>Arbitrary Batching</p>
+          <img class="full" src="img/batched-jobs-3.png" />
+        </div>
+      </div>
 
 
       <!--<div id="re-overview" class="step" data-x="4500" data-y="1500"-->

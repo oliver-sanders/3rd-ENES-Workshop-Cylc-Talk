@@ -14,6 +14,14 @@ body {
     color: rgb(102, 102, 102);
 }
 
+.emph {
+    color: rgb(100,150,200);
+}
+
+.emph1 {
+    color: rgb(200,150,100);
+}
+
 .notes {
   display:none;
 }
