@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/print.css" />
     <link rel="stylesheet" href="highlight/styles/solarized-light.css">
+    <link rel="stylesheet" href="mermaid/mermaid.forest.css">
   </head>
   <body>
 
@@ -132,6 +133,7 @@
              alt="MO Exascale Scope" 
              class="right"/>
         <div class="notes">
+          It can take several years to switch to a new workflow scheduler.
         </div>
     </div>
 
@@ -247,6 +249,189 @@
         </div>
     </div>
 
+    <div class="step" data-rotate="30">
+      <h2>What's cycling needed for?</h2>
+      <ul>
+        <li> clock-limited real time forecasting</li>
+        <li> short chunks of a long simulation</li>
+        <li> steps in some iterative process (e.g....)</li>
+        <li> processing a series of dataset "as concurrently as possible"</li>
+        <li> pipelines!</li>
+      </ul>
+      <div class="notes">
+        might have wider applicability than you think...
+      </div>
+    </div>
+
+    <div class="step" data-rotate="210">
+        <h3>aside: pipelines</h3>
+        <div class="mermaid" style="position:absolute; top:20%; height:20%">
+        %% This is a comment in mermaid markup
+        graph LR
+          A(process<br />one)
+          B(process<br />two)
+          C(process<br />three)
+          A-->B
+          B-->C
+          classDef A1 fill:#d7d7d7,stroke:slategray,stroke-width:5px;
+          classDef B2 fill:#d7d7d7,stroke:slategray,stroke-width:5px;
+          classDef C3 fill:#d7d7d7,stroke:slategray,stroke-width:5px;
+          class A A1
+          class B B2
+          class C C3
+        </div>
+        <div class="mermaid substep" style="position:absolute; top:20%; height:20%">
+        %% This is a comment in mermaid markup
+        graph LR
+          A(process<br />one)
+          B(process<br />two)
+          C(process<br />three)
+          A-->B
+          B-->C
+          classDef A1 fill:#fcf,stroke:#b8b,stroke-width:5px;
+          classDef B2 fill:#d7d7d7,stroke:slategray,stroke-width:5px;
+          classDef C3 fill:#d7d7d7,stroke:slategray,stroke-width:5px;
+          class A A1
+          class B B2
+          class C C3
+        </div>
+
+
+        <div class="mermaid substep" style="position:absolute; top:20%; height:20%">
+        %% This is a comment in mermaid markup
+        graph LR
+          A(process<br />one)
+          B(process<br />two)
+          C(process<br />three)
+          A-->B
+          B-->C
+          classDef A1 fill:#cff,stroke:#8bb,stroke-width:5px;
+          classDef B2 fill:#fcf,stroke:#b8b,stroke-width:5px;
+          classDef C3 fill:#d7d7d7,stroke:slategray,stroke-width:5px;
+          class A A1
+          class B B2
+          class C C3
+        </div>
+
+
+        <div class="mermaid substep" style="position:absolute; top:20%; height:20%">
+        %% This is a comment in mermaid markup
+        graph LR
+          A(process<br />one)
+          B(process<br />two)
+          C(process<br />three)
+          A-->B
+          B-->C
+          classDef A1 fill:#ffc,stroke:#bb8,stroke-width:5px;
+          classDef B2 fill:#cff,stroke:#8bb,stroke-width:5px;
+          classDef C3 fill:#fcf,stroke:#b8b,stroke-width:5px;
+          class A A1
+          class B B2
+          class C C3
+        </div>
+
+        <div class="mermaid substep" style="position:absolute; top:20%; height:20%">
+        %% This is a comment in mermaid markup
+        graph LR
+          A(process<br />one)
+          B(process<br />two)
+          C(process<br />three)
+          A-->B
+          B-->C
+          classDef A1 fill:#d7d7d7,stroke:slategray,stroke-width:5px;
+          classDef B2 fill:#ffc,stroke:#bb8,stroke-width:5px;
+          classDef C3 fill:#cff,stroke:#8bb,stroke-width:5px;
+          class A A1
+          class B B2
+          class C C3
+        </div>
+
+        <div class="mermaid substep" style="position:absolute; top:20%; height:20%">
+        %% This is a comment in mermaid markup
+        graph LR
+          A(process<br />one)
+          B(process<br />two)
+          C(process<br />three)
+          A-->B
+          B-->C
+          classDef A1 fill:#d7d7d7,stroke:slategray,stroke-width:5px;
+          classDef B2 fill:#d7d7d7,stroke:slategray,stroke-width:5px;
+          classDef C3 fill:#ffc,stroke:#8bb,stroke-width:5px;
+          class A A1
+          class B B2
+          class C C3
+        </div>
+
+        <div class="mermaid substep" style="position:absolute; top:20%; height:20%">
+        %% This is a comment in mermaid markup
+        graph LR
+          A(process<br />one)
+          B(process<br />two)
+          C(process<br />three)
+          A-->B
+          B-->C
+          classDef A1 fill:#d7d7d7,stroke:slategray,stroke-width:5px;
+          classDef B2 fill:#d7d7d7,stroke:slategray,stroke-width:5px;
+          classDef C3 fill:#d7d7d7,stroke:slategray,stroke-width:5px;
+          class A A1
+          class B B2
+          class C C3
+        </div>
+ 
+      <pre class="substep"><code class="ini" style="position:absolute; bottom:0">
+[scheduling]
+   [[dependencies]]
+      [[[P1]]]
+         graph = """
+            A => B => C
+            A[-P1] => A
+            B[-P1] => B
+            C[-P1] => C
+                 """
+      </code></pre>
+
+       <img src="img/cylc-pipeline-2.svg" 
+           style="position:absolute; right:0; top:0; height:80%; background:#d7d7d7"
+           right:0"
+           class="substep"
+           alt=""/>
+
+       <img src="img/cylc-pipeline-1.svg" 
+           style="position:absolute; right:0; top:0; height:80%; background:#d7d7d7"
+           right:0"
+           class="substep"
+           alt=""/>
+
+      <pre class="substep"><code class="ini" style="position:absolute; bottom:0; background:#d7d7d7">
+[scheduling]
+   [[dependencies]]
+      [[[P1]]]
+         graph = """
+            A => B => C
+                 """
+          # A[-P1] => A
+          # B[-P1] => B
+          # C[-P1] => C
+      </code></pre>
+ 
+       <img src="img/cylc-pipeline-3.svg" 
+           style="position:absolute; right:0; top:0; height:80%; background:#d7d7d7"
+           right:0"
+           class="substep"
+           alt=""/>
+
+
+        <div class="notes">
+          Mermaid.js, likewise in a
+          href="https://github.com/impress/impress.js/tree/master/extras">extras/</a>
+           directory, draws SVG diagrams from a MarkDown-like syntax. To learn
+          more about it <a
+          href="http://knsv.github.io/mermaid/index.html#usage">read the fine
+          manual</a>.
+        </div>
+    </div>
+
+
     <div class="step">
       <h2>What is Cylc (currently) Like?</h2>
       <ul>
@@ -293,6 +478,10 @@
              class="substep"/>
         <img src="img/gscan.png" 
              style="position:absolute; width:100%; top:25px"
+             alt="" 
+             class="substep"/>
+        <img src="img/rose-bush.png" 
+             style="position:absolute; width:100%"
              alt="" 
              class="substep"/>
         <div class="notes">
@@ -495,6 +684,21 @@
         </div>
       </div>
 
+    <div class="step image" data-rel-x="1500" data-rel-y="0">
+      <h2>Present Capabilities (in terms of large scale)</h2>
+      Met Office: entire workload of 460,000 core HPC managed with Cylc
+
+        <!--img src="img/mo-supercomputer.png" 
+             style="width:40%; margin-top:25px"
+             alt=""/> -->
+        Firstly, what do 
+        <div class="notes">
+           NIWA: "lights out" operation (30 production workflows) with Cylc
+          since 2011?
+        </div>
+
+    </div>
+ 
     <div class="step image" data-rel-x="1500" data-rel-y="0">
         <img src="img/gcylc-3.png" 
              style="width:100%; margin-top:25px"
@@ -799,6 +1003,7 @@
 <div class="impress-progress"></div>
 
     <script type="text/javascript" src="highlight/highlight.cylc.pack.js"></script>
+    <script type="text/javascript" src="mermaid/mermaid.min.js"></script>
     <script type="text/javascript" src="js/impress.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
 
