@@ -70,20 +70,22 @@ h2 {
 }
 
 .person img {
-    float:left;
+    float: left;
     width: 150px;
     height: 150px;
     border-radius: 50%;
     margin: -10px 50px 0 0;
 }
 
+.person .text {
+    float: left;
+}
+
 .person span.name {
-    float:left;
     font-size: 45px;
 }
 
 .person span.description {
-    float:left;
     font-size: 35px;
 }
 
