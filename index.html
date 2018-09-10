@@ -1001,12 +1001,65 @@ Value Pluto not in allowed values
         <p>Optional configurations avoid the need to duplicate app configs for minor variants</p>
       </div>
 
-      <div id="rose-???" class="step" data-rel-x="1500" data-rel-y="0">
-        <h2></h2>
-        <p></p>
+      <div id="rosie" class="step" data-rel-x="1500" data-rel-y="0">
+        <h2>rosie - suite storage & discovery</h2>
+        <p>Suites are version controlled using Subversion</p>
         <ul>
-          <li></li>
+          <li>Each suite has its own trunk</li>
+          <li>Branches can be used for developing changes, etc</li>
         </ul>
+        <p>Each Rosie suite is assigned a unique name. e.g.: mo-aa001</p>
+      </div>
+
+      <div id="rosie-meta" class="step" data-rel-x="1500" data-rel-y="0">
+        <p>Each suite has a rose-suite.info file which provides information about the suite. e.g.</p>
+        <pre><code class="ini">title=PS40 high resolution trial
+project=global-nwp-trial
+description=Copy of u-af326/trunk@23458
+owner=davidmatthews
+access-list=oliversanders</code></pre>
+        <p>Users can add additional metadata as needed.</p>
+        <p>Particular projects can define their own metadata requirements which are enforced.</p>
+      </div>
+
+      <div id="rosie-meta-gui" class="step" data-rel-x="1500" data-rel-y="0">
+        <img src="img/rosie-info.png" 
+             style="width:100%"
+             alt="rosie info" 
+             />
+      </div>
+
+      <div id="rosie-features" class="step" data-rel-x="1500" data-rel-y="0">
+        <p>rosie features:</p>
+        <ul>
+          <li>Create a copy of a suite (with a new unique name)</li>
+          <li>Checkout suites</li>
+          <li>Lookup suites (using the metadata)</li>
+        </ul>
+        <p>Use from the command line or use the GUI</p>
+      </div>
+
+      <div id="rosie-go" class="step" data-rel-x="1500" data-rel-y="0">
+        <img src="img/rosie-go-annotated.png" 
+             style="width:100%"
+             alt="rosie info" 
+             />
+      </div>
+
+      <div id="rosie-summary" class="step" data-rel-x="1500" data-rel-y="0">
+        <h2>Why Use Rosie?</h2>
+        <p>You should consider using Rosie if:</p>
+
+        <p>You want to take advantage of the suite storage, identification and discovery features</p>
+        <p>AND</p>
+        <p>You're comfortable using Subversion for version control</p>
+      </div>
+
+      <div id="rose-roadmap" class="step" data-rel-x="1500" data-rel-y="0">
+        <h2>Rose: Roadmap</h2>
+        <p>Complete migration of Rose functionality into Cylc.</p>
+        <p>Replace current GTK based GUIs with plugins to Cylc web GUI.</p>
+        <p>Port to Python 3.</p>
       </div>
 
       <!--<div id="overview" class="step" data-x="12000" data-y="4000"-->
