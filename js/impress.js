@@ -3902,6 +3902,8 @@
         }
     };
 
+    /* NOTE: contains "substep-current" modification */
+
     var showSubstepIfAny = function( step ) {
         var substeps = step.querySelectorAll( ".substep" );
         var visible = step.querySelectorAll( ".substep-visible" );
@@ -3912,8 +3914,13 @@
 
     var showSubstep = function( substeps, visible ) {
         if ( visible.length < substeps.length ) {
+            for ( var i=0; i < substeps.length; i++ ) {
+                substeps[i].classList.remove("substep-current");
+            }
+
             var el = substeps[ visible.length ];
             el.classList.add( "substep-visible" );
+            el.classList.add( "substep-current" );
             return el;
         }
     };
@@ -3928,11 +3935,24 @@
 
     var hideSubstep = function( visible ) {
         if ( visible.length > 0 ) {
+            var j = -1;
+            for ( var i=0; i < visible.length; i++ ) {
+                if ( visible[i].classList.contains("substep-current") ) {
+                    j = i;
+                }
+                visible[i].classList.remove("substep-current");
+            }
+            if ( j > 0 ) {
+                visible[j - 1].classList.add("substep-current")
+            }
+
             var el = visible[ visible.length - 1 ];
             el.classList.remove( "substep-visible" );
             return el;
         }
     };
+
+    /* END: contains "substep-current" modification */
 
     // Register the plugin to be called in pre-stepleave phase.
     // The weight makes this plugin run before other preStepLeave plugins.
