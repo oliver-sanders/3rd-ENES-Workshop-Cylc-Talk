@@ -59,9 +59,9 @@ async function svgTranslateTo(objectId, elementId, steps, viewSize) {
 
 var graphEvents = [
     /* global graph */
-    ['graph-zoom-1', 'node273', 1000],
-    ['graph-zoom-2', 'node7', 1000],
-    ['graph-zoom-3', 'node269', 1000]
+    ['graph-zoom-1', 'node273', 100, 1000],
+    ['graph-zoom-2', 'node7', 100, 1000],
+    ['graph-zoom-3', 'node269', 100, 1000]
     /* nzlam graph */
     //['graph-zoom-1', 'node1', 50, 750],
     //['graph-zoom-2', 'node613', 100, 1000],
