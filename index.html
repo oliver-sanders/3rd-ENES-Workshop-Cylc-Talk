@@ -804,8 +804,8 @@
       <!-- Rose -->
       <div id="rose" class="step" data-rel-x="0" data-rel-y="1000"
         data-rel-to="exa2">
-        <h1>Introduction To Rose</h1>
-        <p><i>A toolkit for writing, editing and running application configurations</i></p>
+        <h1>Introduction to Rose</h1>
+        <p><i>Storage and configuration of complex Cylc workflows</i></p>
         <div class="person">
           <img src="img/dave.jpg" />
           <div class="text">
@@ -821,23 +821,22 @@
         <p>Development started late 2011 around the time we chose cylc as our workflow tool</p>
       </div>
 
-      <!-- *** Need to indicate last 2 no longer valid *** -->
       <div id="rose-motivation" class="step" data-rel-x="1500" data-rel-y="0">
         <h2>Motivation</h2>
         <ul>
           <li>GUI for application configuration</li>
           <li>Suite version control & identification</li>
-          <li>Enable support of multiple workflow tools</li>
+          <li><i>Enable support of multiple workflow tools</i></li>
           <ul>
-            <li>Cylc may not have worked out?</li>
-            <li>Collaborators might require other tools?</li>
+            <li><i>Cylc may not have worked out?</i></li>
+            <li></i>Collaborators might require other tools?</i></li>
           </ul>
-          <li>Provide essential features which were outside of the Cylc vision</li>
+          <li><i>Provide essential features which were outside of the Cylc vision</i></li>
         </ul>
       </div>
 
       <div id="rose-move-to-cylc" class="step" data-rel-x="1500" data-rel-y="0">
-        <h2>Tools which have moved / are moving / will move into Cylc</h2>
+        <p>Tools which have moved / will move into Cylc</p>
         <ul>
           <li>Log file retrieval</li>
           <li>Email notifications</li>
@@ -846,7 +845,7 @@
           <li>rose suite-run - suite installation</li>
 
           <li>rose host-select -> cluster support</li>
-          <li>rose bunch - combine multiple small tasks into one job</li>
+          <li>rose bunch - run multiple small tasks in one job</li>
           <li>Housekeeping</li>
         </ul>
       </div>
@@ -875,18 +874,16 @@
         <p>Rose applications provide a convenient way to encapsulate all of this
           configuration, storing it all in one place to make it easier to handle
           and maintain.</p>
-        <p>In suite.rc:</p>
-        <pre><code class="ini">
-[runtime]
+        <p>In <i>suite.rc</i>:</p>
+        <pre><code class="ini">[runtime]
     [[hello]]
-        script = rose task-run
-        </code></pre>
-        <p>This will run an app config with the same name as the task (by default)</p>
+        script = rose task-run</code></pre>
+        <p>This will run an app config named "hello" (by default)</p>
       </div>
 
       <div id="rose-apps-config" class="step" data-rel-x="1500" data-rel-y="0">
-        <p>An app config is a directory containing a file named rose-app.conf</p>
-        <p>Simple ini style format (similar to Cylc suite.rc)</p>
+        <p>An app config is a directory containing a file named <i>rose-app.conf</i></p>
+        <p>Simple ini style format (similar to Cylc <i>suite.rc</i>)</p>
         <p>Describes:</p>
         <ul>
           <li>command to run</li>
@@ -898,8 +895,7 @@
 
       <div id="rose-apps-eg" class="step" data-rel-x="1500" data-rel-y="0">
         <h2>rose-app.conf example</h2>
-        <pre><code class="ini">
-[command]
+        <pre><code class="ini">[command]
 default=echo "Hello ${WORLD}!"
 [env]
 WORLD=Earth
@@ -907,8 +903,7 @@ WORLD=Earth
 source=namelist:latlon
 [namelist:latlon]
 latitude=52.168
-longitude=5.744
-        </code></pre>
+longitude=5.744</code></pre>
       </div>
 
       <div id="rose-apps-directory" class="step" data-rel-x="1500" data-rel-y="0">
@@ -929,34 +924,55 @@ longitude=5.744
 
       <div id="rose-metadata-eg" class="step" data-rel-x="1500" data-rel-y="0">
         <h2></h2>
-        <p>rose-app.conf:</p>
-        <pre><code class="ini">
-[env]
-WORLD=Earth
-        </code></pre>
-        <p>meta/rose-meta.conf:</p>
-        <pre><code class="ini">
-[env=WORLD]
+        <p><i>rose-app.conf</i>:</p>
+        <pre><code class="ini">[env]
+WORLD=Earth</code></pre>
+        <p><i>meta/rose-meta.conf</i>:</p>
+        <pre><code class="ini">[env=WORLD]
 description=The name of the world to say hello to
 values=Mercury, Venus, Earth, Mars, Jupiter,
-      =Saturn, Uranus, Neptune
-        </code></pre>
+      =Saturn, Uranus, Neptune</code></pre>
       </div>
 
       <div id="rose-macro-eg" class="step" data-rel-x="1500" data-rel-y="0">
         <h2></h2>
         <p>Example: if we were to change the value of WORLD to Pluto</p>
-        <pre><code class="bash">
-$ rose macro -V
+        <pre><code class="bash">$ rose macro -V
 Value Pluto not in allowed values
 ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter',
 'Saturn', 'Uranus', 'Neptune']
         </code></pre>
       </div>
 
-      <div id="rose-edit-eg" class="step" data-rel-x="1500" data-rel-y="0">
-        <h2>rose config-edit</h2>
-        <p>add screenshots ...</p>
+      <div id="rose-edit-eg" class="step image" data-rel-x="1500" data-rel-y="0">
+        <img src="img/rose-edit-1.png"
+             style="position:absolute; height:90%"
+             alt="" 
+             class=""/>
+        <img src="img/rose-edit-2.png"
+             style="position:absolute; height:90%"
+             alt="" 
+             class="substep"/>
+        <img src="img/rose-edit-1.png"
+             style="position:absolute; height:90%"
+             alt="" 
+             class="substep"/>
+        <img src="img/rose-edit-3.png"
+             style="position:absolute; height:90%"
+             alt="" 
+             class="substep"/>
+        <img src="img/rose-edit-4.png"
+             style="position:absolute; height:90%"
+             alt="" 
+             class="substep"/>
+        <img src="img/rose-edit-5.png"
+             style="position:absolute; height:90%"
+             alt="" 
+             class="substep"/>
+        <img src="img/rose-edit-6.png"
+             style="position:absolute; height:90%"
+             alt="" 
+             class="substep"/>
       </div>
 
       <div id="rose-metadata-location" class="step" data-rel-x="1500" data-rel-y="0">
@@ -966,25 +982,26 @@ Value Pluto not in allowed values
         <pre><code class="ini">meta=um-atmos/vn11.1</code></pre>
       </div>
 
-
       <div id="rose-macros" class="step" data-rel-x="1500" data-rel-y="0">
         <h2>rose macro - usage</h2>
-        <p>Validation</p>
         <ul>
-          <li>check against metadata</li>
-          <li>custom - e.g. check config meets requirements for a production run</li>
-        </ul>
-        <p>Transformation</p>
-        <ul>
-          <li>add, delete, rename variables, etc</li>
-          <li>e.g. upgrade to new model release</li>
+          <li>Validation</li>
+          <ul>
+            <li>check against metadata</li>
+            <li>custom - e.g. check config meets requirements for a production run</li>
+          </ul>
+          <li>Transformation</li>
+          <ul>
+            <li>add, delete, rename variables, etc</li>
+            <li>e.g. upgrade to new model release</li>
+          </ul>
         </ul>
       </div>
 
       <div id="rose-apps-opt-config" class="step" data-rel-x="1500" data-rel-y="0">
         <h2>Optional configs</h2>
-        <p>Configuration files which can add to or overwrite the default rose-app.conf configuration</p>
-        <p>Lots of potential uses, e.g.</p>
+        <p>Configuration files which can add to or overwrite the default rose-app.conf configuration.<br>
+          Used for minor variants, e.g.</p>
         <ul>
           <li>Ensembles</li>
           <li>Modifed behaviour on task retry</li>
@@ -1008,17 +1025,17 @@ Value Pluto not in allowed values
           <li>Each suite has its own trunk</li>
           <li>Branches can be used for developing changes, etc</li>
         </ul>
-        <p>Each Rosie suite is assigned a unique name. e.g.: mo-aa001</p>
+        <p>Each Rosie suite is assigned a unique name.<br>
+          e.g.: mo-aa001</p>
       </div>
 
       <div id="rosie-meta" class="step" data-rel-x="1500" data-rel-y="0">
-        <p>Each suite has a rose-suite.info file which provides information about the suite. e.g.</p>
+        <p>Each suite has a <i>rose-suite.info</i> file which provides information about the suite. e.g.</p>
         <pre><code class="ini">title=PS40 high resolution trial
 project=global-nwp-trial
 description=Copy of u-af326/trunk@23458
 owner=davidmatthews
 access-list=oliversanders</code></pre>
-        <p>Users can add additional metadata as needed.</p>
         <p>Particular projects can define their own metadata requirements which are enforced.</p>
       </div>
 
@@ -1030,7 +1047,7 @@ access-list=oliversanders</code></pre>
       </div>
 
       <div id="rosie-features" class="step" data-rel-x="1500" data-rel-y="0">
-        <p>rosie features:</p>
+        <h2>rosie features</h2>
         <ul>
           <li>Create a copy of a suite (with a new unique name)</li>
           <li>Checkout suites</li>
@@ -1047,9 +1064,7 @@ access-list=oliversanders</code></pre>
       </div>
 
       <div id="rosie-summary" class="step" data-rel-x="1500" data-rel-y="0">
-        <h2>Why Use Rosie?</h2>
-        <p>You should consider using Rosie if:</p>
-
+        <h2>Why Consider Using Rosie?</h2>
         <p>You want to take advantage of the suite storage, identification and discovery features</p>
         <p>AND</p>
         <p>You're comfortable using Subversion for version control</p>
