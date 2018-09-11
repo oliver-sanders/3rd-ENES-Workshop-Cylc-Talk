@@ -721,8 +721,8 @@
       <div id="exa2-outline-bigger2" class="step" data-rel-x="1000" data-rel-y="0">
       </div>
 
-      <div id="exa2-vis" class="step" data-rel-x="2200" data-rel-y="-240"
-           data-scale="0.10" data-rel-to="exa2-outline">
+      <div id="exa2-vis-new-gui" class="step" data-rel-x="2200"
+           data-rel-y="-240" data-scale="0.10" data-rel-to="exa2-outline">
       <!--  <h2>The Visualisation Problem</h2>-->
       <!--  <center>-->
       <!--    <object id="graph" data="img/global.svg" type="image/svg+xml">-->
@@ -743,14 +743,14 @@
         <img width="180px" height="250px" src="img/css3.png">
       </div>
 
-      <div id="exa2-vis2" class="step" data-rel-x="75" data-rel-y="0"
-           data-scale="0.10">
+      <div id="exa2-vis-gscan-gcylc" class="step" data-rel-x="75"
+           data-rel-y="0" data-scale="0.10">
         <h3>Combine <i>gscan</i> & <i>gcylc</i></h3>
         <img class="full" src="img/gui-gscan-gcylc.png"/>
       </div>
 
-      <div id="exa2-vis3" class="step" data-rel-x="75" data-rel-y="0"
-           data-scale="0.10">
+      <div id="exa2-vis-graph-n-edges" class="step" data-rel-x="75"
+           data-rel-y="0" data-scale="0.10">
         <h3>View N Edges To Selected Node</h3>
         <img class="full substep flash"
              src="img/gui-graph-limited-nodes-1.svg"
@@ -761,25 +761,29 @@
         <!-- TODO - export on a computer with better font support -->
       </div>
 
-      <div id="exa2-vis4" class="step" data-rel-x="80" data-rel-y="0"
-           data-scale="0.10">
+      <div id="exa2-vis-alternative-views" class="step" data-rel-x="80"
+           data-rel-y="0" data-scale="0.10">
         <h3>Alternative Views</h3>
-        <img class="full" src="img/gant.png" />
+        <img style="float:left;" class="full" src="img/gant.png" />
+        <ul style="float:left;">
+          <li>Gant chart</li>
+          <li>Adjacency matrix</li>
+          <li>Other?</li>
       </div>
 
-      <div id="exa2-vis5" class="step" data-rel-x="60" data-rel-y="0"
-           data-scale="0.10">
-        <h3>Selecting Tasks Between Views</h3>
-        <!-- TODO - remove image background -->
-        <img height="380px" src="img/gui-matrix.png" />
-      </div>
+      <!--<div id="exa2-vis5" class="step" data-rel-x="60" data-rel-y="0"-->
+      <!--     data-scale="0.10">-->
+      <!--  <h3>Selecting Tasks Between Views</h3>-->
+      <!--  [> TODO - remove image background <]-->
+      <!--  <img height="380px" src="img/gui-matrix.png" />-->
+      <!--</div>-->
 
-      <div id="exa2-writ-pre" class="step" data-rel-x="-800"
+      <div id="exa2-writ-pre" class="step" data-rel-x="-1000"
            data-rel-y="150" data-rel-to="exa2-bigger">
       </div>
 
-      <div id="exa2-writ" class="step" data-rel-x="2200" data-rel-y="-110"
-           data-scale="0.10" data-rel-to="exa2-outline">
+      <div id="exa2-writ-modularity-1" class="step" data-rel-x="2200"
+           data-rel-y="-110" data-scale="0.10" data-rel-to="exa2-outline">
         <h2>The Modularity Problem</h2>
         <ul>
           <li>We can split the suite.rc into multiple files but...</li>
@@ -788,22 +792,21 @@
         </ul>
       </div>
 
-      <div id="exa2-writ1" class="step" data-rel-x="110" data-rel-y="0"
-           data-scale="0.10">
+      <div id="exa2-writ-modularity-2" class="step" data-rel-x="110"
+           data-rel-y="0" data-scale="0.10">
         <p>It's hard to incorporate a module into a workflow</p>
         <img width="1000px" src="img/sub-workflow-current.png" />
       </div>
 
-      <div id="exa2-writ2" class="step" data-rel-x="110" data-rel-y="0"
-           data-scale="0.10">
+      <div id="exa2-writ-modularity-3" class="step" data-rel-x="110"
+           data-rel-y="0" data-scale="0.10">
         <p>Ideally we would write dependencies to/from the module itself
         rather than the tasks within it</p>
         <img width="1000px" src="img/sub-workflow.png" />
-
       </div>
 
-      <div id="exa2-writ3" class="step" data-rel-x="110" data-rel-y="0"
-           data-scale="0.10">
+      <div id="exa2-writ-modularity-4" class="step" data-rel-x="110"
+           data-rel-y="0" data-scale="0.10">
         <p>Workflows could be represented as tasks</p>
         <img width="500px" src="img/sub-workflow-collapsed.png" />
         <pre>foo => baz => module&lt;param&gt; => pub</pre>
@@ -819,8 +822,49 @@
       <!--  </ul>-->
       <!--</div>-->
 
-      <div id="exa2-writ5" class="step" data-rel-x="110" data-rel-y="0"
+      <div id="exa2-writ-python-1" class="step" data-rel-x="110" data-rel-y="0"
            data-scale="0.10">
+        <h3>Python API</h3>
+        <!--<p>For truly programmatic problems Jinja2 doesn't quite cut it!</p>-->
+        <p>Python &gt; Jinja2</p>
+
+        <p class="emph">Illustrative examples Python <i>could</i>
+        provide Cylc:</p>
+
+        <pre><code class="python">bar = cylc.Task('myscript')
+
+cylc.run(
+    foo &gt;&gt; bar &gt;&gt; baz
+)</code></pre>
+      </div>
+
+      <div id="exa2-writ-python-2" class="step" data-rel-x="110" data-rel-y="0"
+           data-scale="0.10">
+        <p>Use Python data structures as Cylc parameters:</p>
+        <pre><code class="python">animal = cylc.Parameter({
+    'cat': {'lives': 9, 'memory': 2},
+    'dog': {'lives': 1, 'memory': 10}
+})
+
+baz = cylc.TaskArray('run-baz',
+    args=('--animal', animal),
+    env={'N_LIVES': animal['lives']}),
+    directives={'--mem': animal['memory']}
+)</code></pre>
+      </div>
+
+      <div id="exa2-writ-python-3" class="step" data-rel-x="110" data-rel-y="0"
+           data-scale="0.10">
+        <p>Use Python to write Cylc modules:</p>
+        <pre><code>import my_component
+graph = cylc.graph(
+    foo &gt;&gt; bar &gt;&gt; my_component &gt;&gt; baz,
+    my_component.pub &gt;&gt; qux
+)</code></pre>
+      </div>
+
+      <div id="exa2-writ-scheduling-paradigms" class="step" data-rel-x="110"
+           data-rel-y="0" data-scale="0.10">
         <h3>Alternative Scheduling Paradigms</h3>
         <div style="float: left; margin: 0 50px 0 0;">
           <div class="bubble">Abstract dependency</div>
@@ -843,21 +887,13 @@ baz:
         </ul>
       </div>
 
-      <div id="exa2-writN" class="step" data-rel-x="110" data-rel-y="0"
-           data-scale="0.10">
-        <h3>Python API</h3>
-        <p>For truly programmatic problems Jinja2 doesn't quite cut it!</p>
-
-        TODO - this
-      </div>
-
-      <div id="exa2-writ-pre" class="step" data-rel-x="-800"
+      <div id="exa2-writ-pre" class="step" data-rel-x="-1000"
            data-rel-y="150" data-rel-to="exa2-bigger">
       </div>
 
       <!-- TODO insert slides with profiling results -->
 
-      <div id="exa2-run1" class="step" data-rel-x="2200" data-rel-y="40"
+      <div id="exa2-run-scaling" class="step" data-rel-x="2200" data-rel-y="40"
            data-scale="0.10" data-rel-to="exa2-outline">
         <h3>Scaling With Dependencies</h3>
         <p>Cylc can currently scale to tens of thousands of tasks and
@@ -865,29 +901,33 @@ baz:
         <p>But there are limitations, for example:</p>
       </div>
 
-      <div id="exa2-run2" class="step" data-rel-x="110" data-rel-y="0"
-           data-scale="0.10">
+      <div id="exa2-run-many-many-1" class="step" data-rel-x="110"
+           data-rel-y="0" data-scale="0.10">
         <img height="60%" src="img/many-to-many.png" />
         <p>Many to many triggers result in NxM dependencies</p>
       </div>
 
-      <div id="exa2-run3" class="step" data-rel-x="110" data-rel-y="0"
-           data-scale="0.10">
+      <div id="exa2-run-many-many-2" class="step" data-rel-x="110"
+           data-rel-y="0" data-scale="0.10">
         <img height="60%" src="img/many-many-as-one.png" />
         <p>Cylc should be able to represent this as a single dependency</p>
       </div>
 
-      <div id="exa2-run4" class="step" data-rel-x="110" data-rel-y="0"
-           data-scale="0.10">
-        <p>Our ambition is to work towards a leaner Cylc which can efficiently
-        scale to the largest suites</p>
-        <p>We plan to reimplement the Cylc scheduling algorithm to a more
+      <div id="exa2-run-many-many-3" class="step" data-rel-x="110"
+           data-rel-y="0" data-scale="0.10">
+        <p>The scheduling algorithm currently <i class="emph">iterates</i> over
+        a "pool" of tasks.</p>
+
+        <p>We plan to re-write the scheduler using an <i class="emph">event
+        driven</i> approach.</p>
+
+        <p>This should make Cylc more
         <i class="emph">efficient</i> and <i class="emph">flexible</i> model
-        to solve problems like this</p>
+        solving problems like this.</p>
       </div>
 
-      <div id="exa2-run5" class="step" data-rel-x="110" data-rel-y="0"
-           data-scale="0.10">
+      <div id="exa2-run-kernel-shell" class="step" data-rel-x="110"
+           data-rel-y="0" data-scale="0.10">
         <h3>Kernel - Shell Architecture</h3>
         <center>
           <p>Working towards a leaner Cylc we plan to separate the codebase into
@@ -909,16 +949,27 @@ baz:
         </center>
       </div>
 
-      <div id="exa2-run6" class="step" data-rel-x="110" data-rel-y="0"
-           data-scale="0.10">
+      <div id="exa2-run-batching-1" class="step" data-rel-x="110"
+           data-rel-y="0" data-scale="0.10">
         <h3>Batching Jobs</h3>
-        <div style="float:left;">
-          <p>Horizontal Batching</p>
-          <img height="380px" src="img/batched-jobs-2.png" />
-        </div>
-        <div style="float:left;">
-          <p>Arbitrary Batching</p>
+        <p>Combining multiple jobs to run in a single job submission.</p>
+        <img height="380px" src="img/batched-jobs-2.png" />
+      </div>
+
+      <div id="exa2-run-batching-2" class="step" data-rel-x="110"
+           data-rel-y="0" data-scale="0.10">
+        <h3>Arbitrary Batching</h3>
+        <p>A lightweight Cylc kernel could be used to execute a workflow within
+        a job submission.</p>
+        <div style="float:left;width:50%;">
           <img height="380px" src="img/batched-jobs-3.png" />
+        </div>
+        <div style="float:left;width:50%;">
+          <ul>
+            <li class="small">The same Cylc scheduling algorithm</li>
+            <li class="small">No need for job submission</li>
+            <li class="small">Different approach to log / output files</li>
+          </ul>
         </div>
       </div>
 
@@ -926,7 +977,7 @@ baz:
            data-rel-to="exa2-outline">
         <h2>Future Challenges</h2>
         <ul>
-          <li>Container technology<li>
+          <li>Container technology</li>
           <li>Computing in the cloud</li>
           <li>File system usage</li>
         </ul>
