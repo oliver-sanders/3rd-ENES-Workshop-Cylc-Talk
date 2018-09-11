@@ -134,8 +134,9 @@ td {
 .bubble {
     border-radius: 100%;
     background: grey;
-    padding: 10px;
+    padding: 10px 40px 10px 40px;
     text-align: center;
+    color: white;
 }
 
 .impress-enabled div#impress-toolbar {

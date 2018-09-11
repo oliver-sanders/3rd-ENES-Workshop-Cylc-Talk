@@ -710,17 +710,25 @@
         </div>
       </div>
 
-      <div id="exa2-outline" class="step" data-rel-x="1500" data-rel-y="0">
-        <h2>Suites Are Getting Bigger</h2>
-        <p>This presents challenges for:</p>
-        <ul>
-          <li>Visualisation</li>
-          <li>Writing</li>
-          <li>Running</li>
-        </ul>
+      <div id="exa2-outline" class="step" data-rel-x="1500" data-rel-y="200">
+        <!--<h2>Suites Are Getting Bigger</h2>-->
+        <!--<p>This presents challenges for:</p>-->
+        <!--<ul>-->
+        <!--  <li>Visualisation</li>-->
+        <!--  <li>Writing</li>-->
+        <!--  <li>Running</li>-->
+        <!--</ul>-->
+        <object data="img/bigger.svg" type="image.svg+xml" height="1800px">
+        </object>
       </div>
 
-      <div id="exa2-vis" class="step" data-rel-x="0" data-rel-y="-20"
+      <div id="exa2-outline-bigger" class="step" data-rel-x="1000" data-rel-y="0">
+      </div>
+
+      <div id="exa2-outline-bigger2" class="step" data-rel-x="1000" data-rel-y="0">
+      </div>
+
+      <div id="exa2-vis" class="step" data-rel-x="2200" data-rel-y="-240"
            data-scale="0.10" data-rel-to="exa2-outline">
         <h2>The Visualisation Problem</h2>
         <center>
@@ -773,11 +781,11 @@
         <img height="380px" src="img/gui-matrix.png" />
       </div>
 
-      <div id="exa2-writ-pre" class="step" data-rel-x="0" data-rel-y="0"
-           data-rel-to="exa2-outline">
+      <div id="exa2-writ-pre" class="step" data-rel-x="-800"
+           data-rel-y="150" data-rel-to="exa2-bigger">
       </div>
 
-      <div id="exa2-writ" class="step" data-rel-x="0" data-rel-y="75"
+      <div id="exa2-writ" class="step" data-rel-x="2200" data-rel-y="-110"
            data-scale="0.10" data-rel-to="exa2-outline">
         <h2>The Modularity Problem</h2>
         <ul>
@@ -822,11 +830,11 @@
            data-scale="0.10">
         <h3>Alternative Scheduling Paradigms</h3>
         <div style="float: left; margin: 0 50px 0 0;">
-          Abstract dependency
+          <div class="bubble">Abstract dependency</div>
           <code style="opacity: 0.7"><pre>foo => bar => baz</pre></code>
         </div>
         <div style="float: left; margin: 0 50px 0 0;">
-          Data dependency
+          <div class="bubble">Data dependency</div>
           <code style="opacity: 0.7"><pre>foo:
   out: a
 bar:
@@ -836,12 +844,10 @@ baz:
   in: a, b
   out: c</pre></code>
         </div>
-        <div style="float: left; margin: 0 50px 0 0;">
-          Compute resource dependency?
-        </div>
-        <div style="float: left; margin: 0 50px 0 0;">
-          Others?
-        </div>
+        <ul>
+          <li>Compute resource dependency?</li>
+          <li>Others?</li>
+        </ul>
       </div>
 
       <div id="exa2-writN" class="step" data-rel-x="110" data-rel-y="0"
@@ -852,13 +858,13 @@ baz:
         TODO - this
       </div>
 
-      <div id="exa2-run-pre" class="step" data-rel-x="0" data-rel-y="0"
-           data-rel-to="exa2-outline">
+      <div id="exa2-writ-pre" class="step" data-rel-x="-800"
+           data-rel-y="150" data-rel-to="exa2-bigger">
       </div>
 
       <!-- TODO insert slides with profiling results -->
 
-      <div id="exa2-run1" class="step" data-rel-x="0" data-rel-y="170"
+      <div id="exa2-run1" class="step" data-rel-x="2200" data-rel-y="40"
            data-scale="0.10" data-rel-to="exa2-outline">
         <h3>Scaling With Dependencies</h3>
         <p>Cylc can currently scale to tens of thousands of tasks and
@@ -895,15 +901,17 @@ baz:
           a Kernel - Shell model</p>
           <table>
             <tr>
-              <td><div class="bubble" style="color:white">Shell</div></td>
-              <td><div class="bubble" style="color:white">Kernel</div></td>
+              <td><div class="bubble">Shell</div></td>
+              <td><div class="bubble">Kernel</div></td>
             </tr>
             <tr>
               <td class="emph">User Commands</td>
               <td class="emph1">Scheduler</td>
             </tr>
+            <tr>
               <td class="emph">Suite Configuration</td>
               <td class="emph1">Job Submission</td>
+            </tr>
           </table>
         </center>
       </div>
@@ -921,9 +929,14 @@ baz:
         </div>
       </div>
 
-      <div id="exa2-summary" class="step" data-rel-x="1500" data-rel-y="0"
+      <div id="exa2-summary" class="step" data-rel-x="3700" data-rel-y="0"
            data-rel-to="exa2-outline">
-        <h2>Closing Notes</h2>
+        <h2>Future Challenges</h2>
+        <ul>
+          <li>Container technology<li>
+          <li>Computing in the cloud</li>
+          <li>File system usage</li>
+        </ul>
       </div>
 
       <!-- Rose -->
