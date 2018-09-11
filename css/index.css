@@ -56,15 +56,34 @@ code {
   font-size: 70%;
 }
 
-/* Substep plugin */
+.step {
+    opacity: 0.2;
+}
 
+.step.past, .step.present {
+    opacity: 1;
+    transition: opacity 0.2s;
+}
+
+/* Substep plugin */
 #impress .step .substep {
     opacity: 0;
+    transition: opacity 0.5s;
 }
 
 #impress .step .substep.substep-visible {
     opacity: 1;
     transition: opacity 0.5s;
+}
+
+.substep-visible.flash {
+    opacity: 0!important;
+    /*transition: opacity 0.5s;*/
+}
+
+.substep-current.flash {
+    opacity: 1!important;
+    /*transition: opacity 0.5s;*/
 }
 
 
@@ -102,7 +121,7 @@ img.small {
 }
 
 img.full {
-    height: 400px;
+    height: 500px;
 }
 
 td {
