@@ -152,7 +152,8 @@
             <span class="description">NIWA (NZ)</span>
           </div>
         </div>
-        <br/>
+        <br />
+        <br />
         <ul>
           <li> cycling workflows </li>
           <li> workflow definition </li>
@@ -807,14 +808,40 @@
         <pre>foo => baz => module&lt;param&gt; => pub</pre>
       </div>
 
-      <div id="exa2-writ4" class="step" data-rel-x="110" data-rel-y="0"
+      <!--<div id="exa2-writ4" class="step" data-rel-x="110" data-rel-y="0"-->
+      <!--     data-scale="0.10">-->
+      <!--  <p>Advantages of workflow modules:</p>-->
+      <!--  <ul>-->
+      <!--    <li>Re-usable workflow components</li>-->
+      <!--    <li>The parent workflow remains simple</li>-->
+      <!--    <li>Programmatic logic at the correct level (workflow/module)</li>-->
+      <!--  </ul>-->
+      <!--</div>-->
+
+      <div id="exa2-writ5" class="step" data-rel-x="110" data-rel-y="0"
            data-scale="0.10">
-        <p>Advantages of workflow modules:</p>
-        <ul>
-          <li>Re-usable workflow components</li>
-          <li>The parent workflow remains simple</li>
-          <li>Programmatic logic at the correct level (workflow/module)</li>
-        </ul>
+        <h3>Alternative scheduling paradigms</h3>
+        <div style="float: left; margin: 0 50px 0 0;">
+          Abstract dependency
+          <code style="opacity: 0.7"><pre>foo => bar => baz</pre></code>
+        </div>
+        <div style="float: left; margin: 0 50px 0 0;">
+          Data dependency
+          <code style="opacity: 0.7"><pre>foo:
+  out: a
+bar:
+  in: a
+  out: b
+baz:
+  in: a, b
+  out: c</pre></code>
+        </div>
+        <div style="float: left; margin: 0 50px 0 0;">
+          Compute resource dependency?
+        </div>
+        <div style="float: left; margin: 0 50px 0 0;">
+          Others?
+        </div>
       </div>
 
       <div id="exa2-writN" class="step" data-rel-x="110" data-rel-y="0"
@@ -841,13 +868,13 @@
 
       <div id="exa2-run2" class="step" data-rel-x="110" data-rel-y="0"
            data-scale="0.10">
-        <img class="full" src="img/many-to-many.png" />
+        <img height="60%" src="img/many-to-many.png" />
         <p>Many to many triggers result in NxM dependencies</p>
       </div>
 
       <div id="exa2-run3" class="step" data-rel-x="110" data-rel-y="0"
            data-scale="0.10">
-        <img class="full" src="img/many-many-as-one.png" />
+        <img height="60%" src="img/many-many-as-one.png" />
         <p>Cylc should be able to represent this as a single dependency</p>
       </div>
 
@@ -863,9 +890,9 @@
       <div id="exa2-run5" class="step" data-rel-x="110" data-rel-y="0"
            data-scale="0.10">
         <h3>Kernel - Shell Architecture</h3>
-        <p>Working towards a leaner Cylc we plan to separate the codebase into
-        a Kernel - Shell model</p>
         <center>
+          <p>Working towards a leaner Cylc we plan to separate the codebase into
+          a Kernel - Shell model</p>
           <table>
             <tr>
               <td><div class="bubble" style="color:white">Shell</div></td>
@@ -886,11 +913,11 @@
         <h3>Batching together jobs</h3>
         <div style="float:left;">
           <p>Horizontal Batching</p>
-          <img class="full" src="img/batched-jobs-2.png" />
+          <img height="380px" src="img/batched-jobs-2.png" />
         </div>
         <div style="float:left;">
           <p>Arbitrary Batching</p>
-          <img class="full" src="img/batched-jobs-3.png" />
+          <img height="380px" src="img/batched-jobs-3.png" />
         </div>
       </div>
 

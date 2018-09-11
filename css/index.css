@@ -86,14 +86,16 @@ code {
     /*transition: opacity 0.5s;*/
 }
 
-
 h1 {
     font-size: 70px;
-    margin-top:0;
 }
 
 h2 {
     font-size: 60px;
+}
+
+h1, h2, h3 {
+    margin-top:0;
 }
 
 .person img {
