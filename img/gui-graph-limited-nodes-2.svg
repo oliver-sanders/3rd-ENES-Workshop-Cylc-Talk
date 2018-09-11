@@ -387,8 +387,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.5582646"
-     inkscape:cx="172.45938"
-     inkscape:cy="208.84027"
+     inkscape:cx="57.588003"
+     inkscape:cy="233.22637"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -407,7 +407,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -424,11 +424,11 @@
        sodipodi:cy="66.258072"
        sodipodi:rx="75.168404"
        sodipodi:ry="23.7054"
-       d="m 194.91106,66.258072 a 75.168404,23.7054 0 1 1 -150.336803,0 75.168404,23.7054 0 1 1 150.336803,0 z"
+       d="m 194.91106,66.258072 c 0,13.092131 -33.65404,23.7054 -75.1684,23.7054 -41.514362,0 -75.168403,-10.613269 -75.168403,-23.7054 0,-13.092131 33.654041,-23.705401 75.168403,-23.705401 41.51436,0 75.1684,10.61327 75.1684,23.705401 z"
        transform="matrix(1.2645853,0,0,1.5385682,115.97007,227.0977)" />
     <path
        sodipodi:type="arc"
-       style="opacity:0.21721311;fill:#545454;fill-opacity:1;fill-rule:evenodd;stroke:none"
+       style="opacity:0;fill:#545454;fill-opacity:1;fill-rule:evenodd;stroke:none"
        id="path2820-8-9"
        sodipodi:cx="119.74266"
        sodipodi:cy="66.258072"
@@ -438,7 +438,7 @@
        transform="translate(321.18946,16.136724)" />
     <path
        sodipodi:type="arc"
-       style="opacity:0.21721311;fill:#545454;fill-opacity:1;fill-rule:evenodd;stroke:none"
+       style="opacity:0;fill:#545454;fill-opacity:1;fill-rule:evenodd;stroke:none"
        id="path2820-8"
        sodipodi:cx="119.74266"
        sodipodi:cy="66.258072"
@@ -470,7 +470,7 @@
          style="font-size:35px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;font-family:Lato;-inkscape-font-specification:Lato Light">baz</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:35px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#2a2a2a;fill-opacity:0.39380529;stroke:none;font-family:Lato;-inkscape-font-specification:Lato Light"
+       style="font-size:35px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#2a2a2a;fill-opacity:0.39380528999999997;stroke:none;font-family:Lato;-inkscape-font-specification:Lato Light;opacity:0"
        x="75.965096"
        y="93.000664"
        id="text2816-2"
@@ -482,7 +482,7 @@
          style="font-size:35px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;font-family:Lato;-inkscape-font-specification:Lato Light">foo</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:35px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#2a2a2a;fill-opacity:0.39380529;stroke:none;font-family:Lato;-inkscape-font-specification:Lato Light"
+       style="font-size:35px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#2a2a2a;fill-opacity:0.39380528999999997;stroke:none;font-family:Lato;-inkscape-font-specification:Lato Light;opacity:0"
        x="417.61819"
        y="92.190224"
        id="text2816-0"
@@ -603,11 +603,11 @@
          y="419.26779"
          style="font-size:35px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#393939;fill-opacity:1;font-family:Lato;-inkscape-font-specification:Lato Light">yin</tspan></text>
     <path
-       style="fill:none;stroke:#000000;stroke-width:2.20000004999999987;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Mend);opacity:0.15983607"
+       style="fill:none;stroke:#000000;stroke-width:2.20000004999999987;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Mend);opacity:0"
        d="m 156.97928,102.58478 50.09355,37.57017"
        id="path3899" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:2.20000004999999987;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Mend);opacity:0.15983607"
+       style="fill:none;stroke:#000000;stroke-width:2.20000004999999987;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Mend);opacity:0"
        d="M 389.12442,109.0363 335.9691,142.13304"
        id="path3899-6" />
     <path
