@@ -173,3 +173,8 @@ td {
   font-size: 10pt;
   opacity: 0.6;
 }
+
+.strike {
+    text-decoration: line-through;
+    text-decoration-color: red;
+}

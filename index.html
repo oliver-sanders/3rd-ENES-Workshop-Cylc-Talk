@@ -949,7 +949,7 @@ baz:
 
       <div id="rose-motivation" class="step" data-rel-x="1500" data-rel-y="0">
         <h2>Motivation</h2>
-        <ul>
+        <ul style="position: absolute" class="substep flash">
           <li>GUI for application configuration</li>
           <li>Suite version control & identification</li>
           <li><i>Enable support of multiple workflow tools</i></li>
@@ -959,20 +959,37 @@ baz:
           </ul>
           <li><i>Provide essential features which were outside of the Cylc vision</i></li>
         </ul>
+        <ul style="position: absolute" class="substep flash">
+          <li>GUI for application configuration</li>
+          <li>Suite version control & identification</li>
+          <li class="strike"><i>Enable support of multiple workflow tools</i></li>
+          <ul>
+            <li class="strike"><i>Cylc may not have worked out?</i></li>
+            <li class="strike">
+              </i>Collaborators might require other tools?</i></li>
+          </ul>
+          <li class="strike">
+            <i>Provide essential features which were outside of the Cylc
+            vision</i></li>
+        </ul>
       </div>
 
       <div id="rose-move-to-cylc" class="step" data-rel-x="1500" data-rel-y="0">
         <p>Tools which have moved / will move into Cylc</p>
         <ul>
-          <li>Log file retrieval</li>
-          <li>Email notifications</li>
+          <li style="color:rgb(0,150,0)">Log file retrieval</li>
+          <li style="color:rgb(0,150,0)">Email notifications</li>
 
-          <li>rose bush - log file viewer</li>
-          <li>rose suite-run - suite installation</li>
+          <li style="color:rgb(0,0,150)">
+            rose bush - log file viewer</li>
+          <li style="color:rgb(0,0,150)">
+            rose suite-run - suite installation</li>
 
-          <li>rose host-select -> cluster support</li>
-          <li>rose bunch - run multiple small tasks in one job</li>
-          <li>Housekeeping</li>
+          <li style="color:rgb(150,0,0)">
+            rose host-select -> cluster support</li>
+          <li style="color:rgb(150,0,0)">
+            rose bunch - run multiple small tasks in one job</li>
+          <li style="color:rgb(150,0,0)">Housekeeping</li>
         </ul>
       </div>
 
@@ -1020,7 +1037,7 @@ baz:
       </div>
 
       <div id="rose-apps-eg" class="step" data-rel-x="1500" data-rel-y="0">
-        <h2>rose-app.conf example</h2>
+        <h2><i>rose-app.conf</i> example</h2>
         <pre><code class="ini">[command]
 default=echo "Hello ${WORLD}!"
 [env]
@@ -1033,15 +1050,18 @@ longitude=5.744</code></pre>
       </div>
 
       <div id="rose-apps-directory" class="step" data-rel-x="1500" data-rel-y="0">
-        <p>app config directory may also contain other directories:</p>
+        <p>App config directory may also contain other directories:</p>
         <ul>
-          <li>bin/ - executables (automatically added to $PATH when running the app)</li>
-          <li>file/ - static input files which are automatically copied into the working directory when the app runs</li>
-          <li>meta/ - metadata file describing app configuration</li>
+          <li><b>bin/</b> - executables
+            (automatically added to $PATH when running the app)</li>
+          <li><b>file/</b> - static input files which are automatically
+            copied into the working directory when the app runs</li>
+          <li><b>meta/</b> - metadata file describing app configuration</li>
         </ul>
       </div>
 
-      <div id="rose-apps-metadata" class="step" data-rel-x="1500" data-rel-y="0">
+      <div id="rose-apps-metadata" class="step" data-rel-x="1500"
+           data-rel-y="0">
         <h2>Metadata - What's it used for?</h2>
         <p>Documenting settings</p>
         <p>Performing automatic checking (e.g. type checking)</p>
@@ -1104,19 +1124,19 @@ Value Pluto not in allowed values
       <div id="rose-metadata-location" class="step" data-rel-x="1500" data-rel-y="0">
         <h2>Metadata location</h2>
         <p>metadata can be local to the app or centrally installed (e.g. the metadata for a particular model release)</p>
-        <p>rose-app.conf:</p>
+        <p><i>rose-app.conf</i>:</p>
         <pre><code class="ini">meta=um-atmos/vn11.1</code></pre>
       </div>
 
       <div id="rose-macros" class="step" data-rel-x="1500" data-rel-y="0">
         <h2>rose macro - usage</h2>
         <ul>
-          <li>Validation</li>
+          <li><b>Validation</b></li>
           <ul>
             <li>check against metadata</li>
             <li>custom - e.g. check config meets requirements for a production run</li>
           </ul>
-          <li>Transformation</li>
+          <li><b>Transformation</b></li>
           <ul>
             <li>add, delete, rename variables, etc</li>
             <li>e.g. upgrade to new model release</li>
@@ -1126,7 +1146,8 @@ Value Pluto not in allowed values
 
       <div id="rose-apps-opt-config" class="step" data-rel-x="1500" data-rel-y="0">
         <h2>Optional configs</h2>
-        <p>Configuration files which can add to or overwrite the default rose-app.conf configuration.<br>
+        <p>Configuration files which can add to or overwrite the default
+          <i>rose-app.conf</i> configuration.<br>
           Used for minor variants, e.g.</p>
         <ul>
           <li>Ensembles</li>
@@ -1152,7 +1173,7 @@ Value Pluto not in allowed values
           <li>Branches can be used for developing changes, etc</li>
         </ul>
         <p>Each Rosie suite is assigned a unique name.<br>
-          e.g.: mo-aa001</p>
+          e.g.: <i>mo-aa001</i></p>
       </div>
 
       <div id="rosie-meta" class="step" data-rel-x="1500" data-rel-y="0">
@@ -1175,9 +1196,9 @@ access-list=oliversanders</code></pre>
       <div id="rosie-features" class="step" data-rel-x="1500" data-rel-y="0">
         <h2>rosie features</h2>
         <ul>
-          <li>Create a copy of a suite (with a new unique name)</li>
-          <li>Checkout suites</li>
-          <li>Lookup suites (using the metadata)</li>
+          <li><b>Create a copy</b> of a suite (with a new unique name)</li>
+          <li><b>Checkout suites</b></li>
+          <li><b>Lookup suites</b> (using the metadata)</li>
         </ul>
         <p>Use from the command line or use the GUI</p>
       </div>
@@ -1192,7 +1213,7 @@ access-list=oliversanders</code></pre>
       <div id="rosie-summary" class="step" data-rel-x="1500" data-rel-y="0">
         <h2>Why Consider Using Rosie?</h2>
         <p>You want to take advantage of the suite storage, identification and discovery features</p>
-        <p>AND</p>
+        <p><b style="margin-left:30px;" class="emph">And</b></p>
         <p>You're comfortable using Subversion for version control</p>
       </div>
 
@@ -1203,9 +1224,9 @@ access-list=oliversanders</code></pre>
         <p>Port to Python 3.</p>
       </div>
 
-      <!--<div id="overview" class="step" data-x="12000" data-y="4000"-->
-      <!--     data-scale="15" style="pointer-events: none;">-->
-      <!--</div>-->
+      <div id="overview" class="step" data-x="4500" data-y="2500"
+           data-scale="10" style="pointer-events: none;">
+      </div>
 
     </div>
 
