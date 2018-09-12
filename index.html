@@ -255,7 +255,7 @@
         <li> clock-limited real time forecasting</li>
         <li> short chunks of a long simulation</li>
         <li> steps in some iterative process (e.g....)</li>
-        <li> processing a series of dataset "as concurrently as possible"</li>
+        <li> processing datasets <i>as concurrently as possible</i></li>
         <li> pipelines!</li>
       </ul>
       <div class="notes">
@@ -265,12 +265,12 @@
 
     <div class="step" data-rotate="210">
         <h3>aside: pipelines</h3>
-        <div class="mermaid" style="position:absolute; top:20%; height:20%">
+        <div class="mermaid" style="position:absolute; top:20%; height:16%">
         %% This is a comment in mermaid markup
         graph LR
-          A(process<br />one)
-          B(process<br />two)
-          C(process<br />three)
+          A(process<br />A)
+          B(process<br />B)
+          C(process<br />C)
           A-->B
           B-->C
           classDef A1 fill:#d7d7d7,stroke:slategray,stroke-width:5px;
@@ -280,12 +280,12 @@
           class B B2
           class C C3
         </div>
-        <div class="mermaid substep" style="position:absolute; top:20%; height:20%">
+        <div class="mermaid substep" style="position:absolute; top:20%; height:16%">
         %% This is a comment in mermaid markup
         graph LR
-          A(process<br />one)
-          B(process<br />two)
-          C(process<br />three)
+          A(process<br />A)
+          B(process<br />B)
+          C(process<br />C)
           A-->B
           B-->C
           classDef A1 fill:#fcf,stroke:#b8b,stroke-width:5px;
@@ -297,12 +297,12 @@
         </div>
 
 
-        <div class="mermaid substep" style="position:absolute; top:20%; height:20%">
+        <div class="mermaid substep" style="position:absolute; top:20%; height:16%">
         %% This is a comment in mermaid markup
         graph LR
-          A(process<br />one)
-          B(process<br />two)
-          C(process<br />three)
+          A(process<br />A)
+          B(process<br />B)
+          C(process<br />C)
           A-->B
           B-->C
           classDef A1 fill:#cff,stroke:#8bb,stroke-width:5px;
@@ -314,12 +314,12 @@
         </div>
 
 
-        <div class="mermaid substep" style="position:absolute; top:20%; height:20%">
+        <div class="mermaid substep" style="position:absolute; top:20%; height:16%">
         %% This is a comment in mermaid markup
         graph LR
-          A(process<br />one)
-          B(process<br />two)
-          C(process<br />three)
+          A(process<br />A)
+          B(process<br />B)
+          C(process<br />C)
           A-->B
           B-->C
           classDef A1 fill:#ffc,stroke:#bb8,stroke-width:5px;
@@ -330,12 +330,12 @@
           class C C3
         </div>
 
-        <div class="mermaid substep" style="position:absolute; top:20%; height:20%">
+        <div class="mermaid substep" style="position:absolute; top:20%; height:16%">
         %% This is a comment in mermaid markup
         graph LR
-          A(process<br />one)
-          B(process<br />two)
-          C(process<br />three)
+          A(process<br />A)
+          B(process<br />B)
+          C(process<br />C)
           A-->B
           B-->C
           classDef A1 fill:#d7d7d7,stroke:slategray,stroke-width:5px;
@@ -346,12 +346,12 @@
           class C C3
         </div>
 
-        <div class="mermaid substep" style="position:absolute; top:20%; height:20%">
+        <div class="mermaid substep" style="position:absolute; top:20%; height:16%">
         %% This is a comment in mermaid markup
         graph LR
-          A(process<br />one)
-          B(process<br />two)
-          C(process<br />three)
+          A(process<br />A)
+          B(process<br />B)
+          C(process<br />C)
           A-->B
           B-->C
           classDef A1 fill:#d7d7d7,stroke:slategray,stroke-width:5px;
@@ -362,12 +362,12 @@
           class C C3
         </div>
 
-        <div class="mermaid substep" style="position:absolute; top:20%; height:20%">
+        <div class="mermaid substep" style="position:absolute; top:20%; height:16%">
         %% This is a comment in mermaid markup
         graph LR
-          A(process<br />one)
-          B(process<br />two)
-          C(process<br />three)
+          A(process<br />A)
+          B(process<br />B)
+          C(process<br />C)
           A-->B
           B-->C
           classDef A1 fill:#d7d7d7,stroke:slategray,stroke-width:5px;
@@ -378,59 +378,50 @@
           class C C3
         </div>
  
-      <pre class="substep"><code class="ini" style="position:absolute; bottom:0">
+      <pre class="substep"><code class="ini" style="position:absolute; top:35%">
 [scheduling]
    [[dependencies]]
       [[[P1]]]
-         graph = """
-            A => B => C
+         graph = """A => B => C
             A[-P1] => A
             B[-P1] => B
-            C[-P1] => C
-                 """
+            C[-P1] => C"""
       </code></pre>
 
-       <img src="img/cylc-pipeline-2.svg" 
-           style="position:absolute; right:0; top:0; height:80%; background:#d7d7d7"
-           right:0"
-           class="substep"
-           alt=""/>
+       <div class="substep" style="position:absolute; top:6%; right:0;
+         width:35%; height:100%; background:#d7d7d7">
+       <img src="img/cylc-pipeline-1.svg" style="width:100%" alt=""/>
+      </div>
 
-       <img src="img/cylc-pipeline-1.svg" 
-           style="position:absolute; right:0; top:0; height:80%; background:#d7d7d7"
-           right:0"
-           class="substep"
-           alt=""/>
+      <div class="substep" style="position:absolute; top:6%; right:0; width:35%;
+        height:100%; background:#d7d7d7">
+       <img src="img/cylc-pipeline-2.svg" style="width:60%" alt=""/>
+      </div>
 
-      <pre class="substep"><code class="ini" style="position:absolute; bottom:0; background:#d7d7d7">
+      <pre class="substep"><code class="ini" style="position:absolute; top:35%;
+      background:#d7d7d7">
 [scheduling]
    [[dependencies]]
       [[[P1]]]
-         graph = """
-            A => B => C
-                 """
+         graph = """A => B => C"""
           # A[-P1] => A
           # B[-P1] => B
           # C[-P1] => C
       </code></pre>
  
-       <img src="img/cylc-pipeline-3.svg" 
-           style="position:absolute; right:0; top:0; height:80%; background:#d7d7d7"
-           right:0"
-           class="substep"
-           alt=""/>
-
+      <div class="substep" style="position:absolute; top:6%; right:0; width:35%;
+        height:100%; background:#d7d7d7">
+       <img src="img/cylc-pipeline-3.svg" style="width:80%" alt=""/>
+      </div>
 
         <div class="notes">
-          Mermaid.js, likewise in a
-          href="https://github.com/impress/impress.js/tree/master/extras">extras/</a>
-           directory, draws SVG diagrams from a MarkDown-like syntax. To learn
-          more about it <a
-          href="http://knsv.github.io/mermaid/index.html#usage">read the fine
-          manual</a>.
+          <ul>
+            <li>the cycling way allows different things to happen at different
+              cycles, if you need it.</li>
+          </ul>
+<a href="http://knsv.github.io/mermaid/index.html#usage">(mermaid)</a>.
         </div>
     </div>
-
 
     <div class="step">
       <h2>What is Cylc (currently) Like?</h2>
