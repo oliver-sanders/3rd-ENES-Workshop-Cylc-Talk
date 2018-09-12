@@ -1,0 +1,25 @@
+digraph G {
+    rankdir = LR
+    bgcolor = none
+    compound = true;
+
+    subgraph cluster1 {
+        style = dashed 
+        color = cornflowerblue
+        fontcolor = cornflowerblue
+
+        a -> b -> c -> h
+        b -> d -> f
+        e -> f
+        e -> i
+    }
+
+    foo -> bar
+    foo -> baz
+
+    baz -> a [color="cornflowerblue"]
+    baz -> e [color="cornflowerblue"]
+    f -> pub [color="cornflowerblue"]
+    h -> pub [color="cornflowerblue"]
+    i -> pub [color="cornflowerblue"]
+}

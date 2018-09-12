@@ -29,6 +29,4 @@ digraph {
     {rank = same; b_1 -> b_2 [style="invis"]}
     {rank = same; b_2 -> b_x [style="invis"]}
     {rank = same; b_x -> b_N [style="invis"]}
-
-
 }

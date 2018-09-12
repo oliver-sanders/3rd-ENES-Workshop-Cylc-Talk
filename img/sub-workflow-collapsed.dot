@@ -1,0 +1,13 @@
+digraph G {
+    rankdir = LR
+    bgcolor = none
+    compound = true;
+
+    module [shape=box, color="cornflowerblue", fontcolor="cornflowerblue"]
+
+    foo -> bar
+    foo -> baz
+
+    baz -> module [color="cornflowerblue"]
+    module -> pub [color="cornflowerblue"]
+}

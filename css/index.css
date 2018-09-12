@@ -1,5 +1,5 @@
 body {
-    font-family: 'Titillium Web', 'PT Sans', sans-serif;
+    font-family: 'Titillium', 'PT Sans', sans-serif;
 
     min-height: 740px;
 
@@ -14,6 +14,14 @@ body {
     color: rgb(102, 102, 102);
 }
 
+.emph {
+    color: rgb(100,150,200);
+}
+
+.emph1 {
+    color: rgb(200,150,100);
+}
+
 .notes {
   display:none;
 }
@@ -21,7 +29,7 @@ body {
 .step {
     position: relative;
     width: 1000px;
-    height: 800px;
+    height: 750px;
     padding: 40px;
 
     -webkit-box-sizing: border-box;
@@ -30,7 +38,7 @@ body {
     -o-box-sizing:      border-box;
     box-sizing:         border-box;
 
-    font-family: 'Titillium Web', 'PT Serif', georgia, serif;
+    font-family: 'Titillium', 'PT Serif', georgia, serif;
     font-size: 40px;
     line-height: 1.5;
 
@@ -48,10 +56,19 @@ code {
   font-size: 70%;
 }
 
-/* Substep plugin */
+.step {
+    opacity: 0.2;
+}
 
+.step.past, .step.present {
+    opacity: 1;
+    transition: opacity 0.2s;
+}
+
+/* Substep plugin */
 #impress .step .substep {
     opacity: 0;
+    transition: opacity 0.5s;
 }
 
 #impress .step .substep.substep-visible {
@@ -59,31 +76,45 @@ code {
     transition: opacity 0.5s;
 }
 
+.substep-visible.flash {
+    opacity: 0!important;
+    /*transition: opacity 0.5s;*/
+}
+
+.substep-current.flash {
+    opacity: 1!important;
+    /*transition: opacity 0.5s;*/
+}
 
 h1 {
     font-size: 70px;
-    margin-top:0;
 }
 
 h2 {
     font-size: 60px;
 }
 
+h1, h2, h3 {
+    margin-top:0;
+}
+
 .person img {
-    float:left;
+    float: left;
     width: 150px;
     height: 150px;
     border-radius: 50%;
     margin: -10px 50px 0 0;
 }
 
+.person .text {
+    float: left;
+}
+
 .person span.name {
-    float:left;
     font-size: 45px;
 }
 
 .person span.description {
-    float:left;
     font-size: 35px;
 }
 
@@ -92,7 +123,24 @@ img.small {
 }
 
 img.full {
-    height: 400px;
+    height: 500px;
+}
+
+li.small {
+    font-size: 35px;
+}
+
+td {
+    padding: 5px 15px 5px 15px;
+    text-align: center;
+}
+
+.bubble {
+    border-radius: 100%;
+    background: grey;
+    padding: 10px 40px 10px 40px;
+    text-align: center;
+    color: white;
 }
 
 .impress-enabled div#impress-toolbar {
@@ -129,4 +177,9 @@ img.full {
   text-align: left;
   font-size: 10pt;
   opacity: 0.6;
+}
+
+.strike {
+    text-decoration: line-through;
+    text-decoration-color: red;
 }

@@ -12,12 +12,12 @@ digraph {
 
     dummy [shape="point", width=0.01, height=0.01]
 
-    a_1 -> dummy [dir="none"]
-    a_2 -> dummy [dir="none"]
-    a_N -> dummy [dir="none"]
-    dummy -> b_1
-    dummy -> b_2
-    dummy -> b_N
+    a_1 -> dummy [dir="none" color="cornflowerblue"]
+    a_2 -> dummy [dir="none" color="cornflowerblue"]
+    a_N -> dummy [dir="none" color="cornflowerblue"]
+    dummy -> b_1 [color="cornflowerblue"]
+    dummy -> b_2 [color="cornflowerblue"]
+    dummy -> b_N [color="cornflowerblue"]
 
     {rank = same; a_1 -> a_2 [style="invis"]}
     {rank = same; a_2 -> a_x [style="invis"]}
@@ -26,6 +26,4 @@ digraph {
     {rank = same; b_1 -> b_2 [style="invis"]}
     {rank = same; b_2 -> b_x [style="invis"]}
     {rank = same; b_x -> b_N [style="invis"]}
-
-
 }
