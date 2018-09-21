@@ -34,6 +34,13 @@
           </a>
         </div>
 
+        <div style="position:absolute; top:40%; right:10%; padding:10px;
+          height:180px; width:180px; border:2px solid white; color:white;
+          border-radius:10px; background:#aaa; font-size:42%">
+          This is an HTML presentation - use arrow keys to advance the slides
+          in your browser; hit 'p' to see slide notes in presenter view.
+        </div>
+
         <div style="position:absolute; bottom:0; width:80%; left:10%; height:200px">
  
           <div style="width:45%; position:absolute; top:0; left:1%">
@@ -253,7 +260,7 @@
     </div>
 
     <div class="step image" id="intro-cycling-vid" data-rotate="30">
-      <video onclick="this.paused ? this.play() : this.pause();"
+      <video controls onclick="this.paused ? this.play() : this.pause();"
         style="width:100%; margin-top:20px">
       <source src="img/cycling-workflow-10-retries.webm">
       Your browser does not support webm video
